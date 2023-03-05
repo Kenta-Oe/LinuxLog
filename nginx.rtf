@@ -1,0 +1,465 @@
+{\rtf1\ansi\ansicpg932\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset128 HiraginoSans-W3;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red202\green51\blue35;\red57\green192\blue38;
+\red77\green109\blue255;\red45\green255\blue255;\red220\green0\blue5;\red9\green9\blue9;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c83899\c28663\c18026;\cssrgb\c25706\c77963\c19557;
+\cssrgb\c37428\c52838\c100000;\cssrgb\c14670\c100000\c100000;\cssrgb\c90000\c0\c0;\cspthree\c3137\c3137\c3137;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 [root@deploy ~]# \
+[root@deploy ~]# date\
+2023
+\f1 \'94\'4e
+\f0   2
+\f1 \'8c\'8e
+\f0  23
+\f1 \'93\'fa
+\f0  
+\f1 \'96\'d8\'97\'6a\'93\'fa
+\f0  21:56:56 JST\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# uname -r\
+3.10.0-1160.el7.x86_64\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# yum search nginx\
+
+\f1 \'93\'c7\'82\'dd\'8d\'9e\'82\'f1\'82\'be\'83\'76\'83\'89\'83\'4f\'83\'43\'83\'93
+\f0 :fastestmirror\
+Loading mirror speeds from cached hostfile\
+ * base: ftp.riken.jp\
+ * extras: ftp.riken.jp\
+ * updates: ftp.riken.jp\
+============================================ N/S matched: nginx =============================================\
+pcp-pmda-
+\f2\b nginx
+\f0\b0 .x86_64 : Performance Co-Pilot (PCP) metrics for the 
+\f2\b Nginx
+\f0\b0  Webserver\
+\
+  Name and summary matches 
+\f2\b only
+\f0\b0 , use "search all" for everything.\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# vi /etc/yum.repos.d/nginx.repo\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# yum search nginx\
+
+\f1 \'93\'c7\'82\'dd\'8d\'9e\'82\'f1\'82\'be\'83\'76\'83\'89\'83\'4f\'83\'43\'83\'93
+\f0 :fastestmirror\
+Loading mirror speeds from cached hostfile\
+ * base: ftp.riken.jp\
+ * extras: ftp.riken.jp\
+ * updates: ftp.riken.jp\
+============================================ N/S matched: nginx =============================================\
+
+\f2\b nginx
+\f0\b0 -debug.x86_64 : debug version of 
+\f2\b nginx
+\f0\b0 \
+
+\f2\b nginx
+\f0\b0 -debuginfo.x86_64 : Debug information for package 
+\f2\b nginx
+\f0\b0 \
+
+\f2\b nginx
+\f0\b0 -module-geoip.x86_64 : 
+\f2\b nginx
+\f0\b0  GeoIP dynamic modules\
+
+\f2\b nginx
+\f0\b0 -module-geoip-debuginfo.x86_64 : Debug information for package 
+\f2\b nginx
+\f0\b0 -module-geoip\
+
+\f2\b nginx
+\f0\b0 -module-image-filter.x86_64 : 
+\f2\b nginx
+\f0\b0  image filter dynamic module\
+
+\f2\b nginx
+\f0\b0 -module-image-filter-debuginfo.x86_64 : Debug information for package 
+\f2\b nginx
+\f0\b0 -module-image-filter\
+
+\f2\b nginx
+\f0\b0 -module-njs.x86_64 : 
+\f2\b nginx
+\f0\b0  njs dynamic modules\
+
+\f2\b nginx
+\f0\b0 -module-njs-debuginfo.x86_64 : Debug information for package 
+\f2\b nginx
+\f0\b0 -module-njs\
+
+\f2\b nginx
+\f0\b0 -module-perl.x86_64 : 
+\f2\b nginx
+\f0\b0  Perl dynamic module\
+
+\f2\b nginx
+\f0\b0 -module-perl-debuginfo.x86_64 : Debug information for package 
+\f2\b nginx
+\f0\b0 -module-perl\
+
+\f2\b nginx
+\f0\b0 -module-xslt.x86_64 : 
+\f2\b nginx
+\f0\b0  xslt dynamic module\
+
+\f2\b nginx
+\f0\b0 -module-xslt-debuginfo.x86_64 : Debug information for package 
+\f2\b nginx
+\f0\b0 -module-xslt\
+
+\f2\b nginx
+\f0\b0 -nr-agent.noarch : New Relic agent for 
+\f2\b NGINX
+\f0\b0  and 
+\f2\b NGINX
+\f0\b0  Plus\
+pcp-pmda-
+\f2\b nginx
+\f0\b0 .x86_64 : Performance Co-Pilot (PCP) metrics for the 
+\f2\b Nginx
+\f0\b0  Webserver\
+
+\f2\b nginx
+\f0\b0 .x86_64 : High performance web server\
+unit.x86_64 : 
+\f2\b NGINX
+\f0\b0  Unit\
+unit-devel.x86_64 : 
+\f2\b NGINX
+\f0\b0  Unit (development tools)\
+\
+  Name and summary matches 
+\f2\b only
+\f0\b0 , use "search all" for everything.\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# yum info nginx\
+
+\f1 \'93\'c7\'82\'dd\'8d\'9e\'82\'f1\'82\'be\'83\'76\'83\'89\'83\'4f\'83\'43\'83\'93
+\f0 :fastestmirror\
+Loading mirror speeds from cached hostfile\
+ * base: ftp.riken.jp\
+ * extras: ftp.riken.jp\
+ * updates: ftp.riken.jp\
+
+\f1 \'97\'98\'97\'70\'89\'c2\'94\'5c\'82\'c8\'83\'70\'83\'62\'83\'50\'81\'5b\'83\'57
+\f0 \
+
+\f1 \'96\'bc\'91\'4f
+\f0                 : nginx\
+
+\f1 \'83\'41\'81\'5b\'83\'4c\'83\'65\'83\'4e\'83\'60\'83\'83\'81\'5b
+\f0     : x86_64\
+
+\f1 \'83\'47\'83\'7c\'83\'62\'83\'4e
+\f0             : 1\
+
+\f1 \'83\'6f\'81\'5b\'83\'57\'83\'87\'83\'93
+\f0           : 1.23.3\
+
+\f1 \'83\'8a\'83\'8a\'81\'5b\'83\'58
+\f0             : 1.el7.ngx\
+
+\f1 \'97\'65\'97\'ca
+\f0                 : 803 k\
+
+\f1 \'83\'8a\'83\'7c\'83\'57\'83\'67\'83\'8a\'81\'5b
+\f0         : nginx/x86_64\
+
+\f1 \'97\'76\'96\'f1
+\f0                 : High performance web server\
+URL                 : https://nginx.org/\
+
+\f1 \'83\'89\'83\'43\'83\'5a\'83\'93\'83\'58
+\f0           : 2-clause BSD-like license\
+
+\f1 \'90\'e0\'96\'be
+\f0                 : nginx [engine x] is an HTTP and reverse proxy server, as well as\
+                    : a mail proxy server.\
+\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# yum install nginx\
+
+\f1 \'93\'c7\'82\'dd\'8d\'9e\'82\'f1\'82\'be\'83\'76\'83\'89\'83\'4f\'83\'43\'83\'93
+\f0 :fastestmirror\
+Loading mirror speeds from cached hostfile\
+ * base: ftp.riken.jp\
+ * extras: ftp.riken.jp\
+ * updates: ftp.riken.jp\
+nginx                                                                                 | 2.9 kB  00:00:00     \
+
+\f1 \'88\'cb\'91\'b6\'90\'ab\'82\'cc\'89\'f0\'8c\'88\'82\'f0\'82\'b5\'82\'c4\'82\'a2\'82\'dc\'82\'b7
+\f0 \
+--> 
+\f1 \'83\'67\'83\'89\'83\'93\'83\'55\'83\'4e\'83\'56\'83\'87\'83\'93\'82\'cc\'8a\'6d\'94\'46\'82\'f0\'8e\'c0\'8d\'73\'82\'b5\'82\'c4\'82\'a2\'82\'dc\'82\'b7\'81\'42
+\f0 \
+---> 
+\f1 \'83\'70\'83\'62\'83\'50\'81\'5b\'83\'57
+\f0  nginx.x86_64 1:1.23.3-1.el7.ngx 
+\f1 \'82\'f0
+\f0  
+\f1 \'83\'43\'83\'93\'83\'58\'83\'67\'81\'5b\'83\'8b
+\f0 \
+--> 
+\f1 \'88\'cb\'91\'b6\'90\'ab\'89\'f0\'8c\'88\'82\'f0\'8f\'49\'97\'b9\'82\'b5\'82\'dc\'82\'b5\'82\'bd\'81\'42
+\f0 \
+\
+
+\f1 \'88\'cb\'91\'b6\'90\'ab\'82\'f0\'89\'f0\'8c\'88\'82\'b5\'82\'dc\'82\'b5\'82\'bd
+\f0 \
+\
+=============================================================================================================\
+ Package               
+\f1 \'83\'41\'81\'5b\'83\'4c\'83\'65\'83\'4e\'83\'60\'83\'83\'81\'5b
+\f0        
+\f1 \'83\'6f\'81\'5b\'83\'57\'83\'87\'83\'93
+\f0                          
+\f1 \'83\'8a\'83\'7c\'83\'57\'83\'67\'83\'8a\'81\'5b
+\f0            
+\f1 \'97\'65\'97\'ca
+\f0 \
+=============================================================================================================\
+
+\f1 \'83\'43\'83\'93\'83\'58\'83\'67\'81\'5b\'83\'8b\'92\'86
+\f0 :\
+ nginx                 x86_64                 1:1.23.3-1.el7.ngx                 nginx                 803 k\
+\
+
+\f1 \'83\'67\'83\'89\'83\'93\'83\'55\'83\'4e\'83\'56\'83\'87\'83\'93\'82\'cc\'97\'76\'96\'f1
+\f0 \
+=============================================================================================================\
+
+\f1 \'83\'43\'83\'93\'83\'58\'83\'67\'81\'5b\'83\'8b
+\f0   1 
+\f1 \'83\'70\'83\'62\'83\'50\'81\'5b\'83\'57
+\f0 \
+\
+
+\f1 \'91\'8d\'83\'5f\'83\'45\'83\'93\'83\'8d\'81\'5b\'83\'68\'97\'65\'97\'ca
+\f0 : 803 k\
+
+\f1 \'83\'43\'83\'93\'83\'58\'83\'67\'81\'5b\'83\'8b\'97\'65\'97\'ca
+\f0 : 2.8 M\
+Is this ok [y/d/N]: y\
+Downloading packages:\
+nginx-1.23.3-1.el7.ngx.x86_64.rpm                                                     | 803 kB  00:00:04     \
+Running transaction check\
+Running transaction test\
+Transaction test succeeded\
+Running transaction\
+  
+\f1 \'83\'43\'83\'93\'83\'58\'83\'67\'81\'5b\'83\'8b\'92\'86
+\f0           : 1:nginx-1.23.3-1.el7.ngx.x86_64                                              1/1 \
+----------------------------------------------------------------------\
+\
+Thanks for using nginx!\
+\
+Please find the official documentation for nginx here:\
+* https://nginx.org/en/docs/\
+\
+Please subscribe to nginx-announce mailing list to get\
+the most important news about nginx:\
+* https://nginx.org/en/support.html\
+\
+Commercial subscriptions for nginx are available on:\
+* https://nginx.com/products/\
+\
+----------------------------------------------------------------------\
+  
+\f1 \'8c\'9f\'8f\'d8\'92\'86
+\f0                   : 1:nginx-1.23.3-1.el7.ngx.x86_64                                              1/1 \
+\
+
+\f1 \'83\'43\'83\'93\'83\'58\'83\'67\'81\'5b\'83\'8b
+\f0 :\
+  nginx.x86_64 1:1.23.3-1.el7.ngx                                                                            \
+\
+
+\f1 \'8a\'ae\'97\'b9\'82\'b5\'82\'dc\'82\'b5\'82\'bd
+\f0 !\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# yum list installed | grep nginx\
+
+\f2\b \cf3 nginx
+\f0\b0 \cf2 .x86_64                          1:1.23.3-1.el7.ngx               @
+\f2\b \cf3 nginx
+\f0\b0 \cf2    \
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# systemctl start nginx\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# systemctl status nginx\
+
+\f2\b \cf4 \uc0\u9679 
+\f0\b0 \cf2  nginx.service - nginx - high performance web server\
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)\
+   Active: 
+\f2\b \cf4 active (running)
+\f0\b0 \cf2  since 
+\f1 \'96\'d8
+\f0  2023-02-23 22:00:02 JST; 7s ago\
+     Docs: http://nginx.org/en/docs/\
+  Process: 1603 ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf (code=exited, status=0/SUCCESS)\
+ Main PID: 1604 (nginx)\
+   CGroup: /system.slice/nginx.service\
+           \uc0\u9500 \u9472 1604 nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf\
+           \uc0\u9500 \u9472 1605 nginx: worker process\
+           \uc0\u9500 \u9472 1606 nginx: worker process\
+           \uc0\u9492 \u9472 1607 nginx: worker process\
+\
+ 2
+\f1 \'8c\'8e
+\f0  23 22:00:02 deploy systemd[1]: Starting nginx - high performance web server...\
+ 2
+\f1 \'8c\'8e
+\f0  23 22:00:02 deploy systemd[1]: Started nginx - high performance web server.\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# systemctl enable nginx\
+Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# ps -aux | grep ngix\
+root      1628  0.0  0.0 112824   968 pts/0    S+   22:00   0:00 grep --color=auto 
+\f2\b \cf3 ngix
+\f0\b0 \cf2 \
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# useradd test\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# passwd test\
+
+\f1 \'83\'86\'81\'5b\'83\'55\'81\'5b
+\f0  test 
+\f1 \'82\'cc\'83\'70\'83\'58\'83\'8f\'81\'5b\'83\'68\'82\'f0\'95\'cf\'8d\'58\'81\'42
+\f0 \
+
+\f1 \'90\'56\'82\'b5\'82\'a2\'83\'70\'83\'58\'83\'8f\'81\'5b\'83\'68
+\f0 :\
+
+\f1 \'90\'56\'82\'b5\'82\'a2\'83\'70\'83\'58\'83\'8f\'81\'5b\'83\'68\'82\'f0\'8d\'c4\'93\'fc\'97\'cd\'82\'b5\'82\'c4\'82\'ad\'82\'be\'82\'b3\'82\'a2
+\f0 :\
+passwd: 
+\f1 \'82\'b7\'82\'d7\'82\'c4\'82\'cc\'94\'46\'8f\'d8\'83\'67\'81\'5b\'83\'4e\'83\'93\'82\'aa\'90\'b3\'82\'b5\'82\'ad\'8d\'58\'90\'56\'82\'c5\'82\'ab\'82\'dc\'82\'b5\'82\'bd\'81\'42
+\f0 \
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# cat /etc/passwd\
+root:x:0:0:root:/root:/bin/bash\
+bin:x:1:1:bin:/bin:/sbin/nologin\
+daemon:x:2:2:daemon:/sbin:/sbin/nologin\
+adm:x:3:4:adm:/var/adm:/sbin/nologin\
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin\
+sync:x:5:0:sync:/sbin:/bin/sync\
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown\
+halt:x:7:0:halt:/sbin:/sbin/halt\
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin\
+operator:x:11:0:operator:/root:/sbin/nologin\
+games:x:12:100:games:/usr/games:/sbin/nologin\
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin\
+nobody:x:99:99:Nobody:/:/sbin/nologin\
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin\
+dbus:x:81:81:System message bus:/:/sbin/nologin\
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin\
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin\
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin\
+chrony:x:998:996::/var/lib/chrony:/sbin/nologin\
+ssh1:x:1000:1000::/home/ssh1:/bin/bash\
+nginx:x:997:995:nginx user:/var/cache/nginx:/sbin/nologin\
+wwww:x:1002:1002::/home/wwww:/bin/bash\
+test:x:1003:1003::/home/test:/bin/bash\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy ~]# id test\
+uid=1003(test) gid=1003(test) groups=1003(test)\
+[root@deploy ~]# \
+[root@deploy ~]# \
+[root@deploy /]# mkdir /home/www/www.testdom.com\
+[root@deploy /]# \
+[root@deploy /]# \
+[root@deploy /]# mkdir /home/www/www.testdom2.com\
+[root@deploy /]# \
+[root@deploy /]# \
+[root@deploy /]# vi /home/www/www.testdom.com/index.html\
+[root@deploy /]# \
+[root@deploy /]# \
+[root@deploy /]# vi /home/www/www.testdom2.com/index.html\
+[root@deploy /]# \
+[root@deploy /]# \
+[root@deploy /]# chown -R test:test /home/www\
+[root@deploy /]# \
+[root@deploy /]# \
+[root@deploy /]# mkdir /etc/nginx/sites-available /etc/nginx/sites-enabled\
+[root@deploy /]# \
+[root@deploy /]# ls -a /etc/nginx\
+\cf5 .\cf2    \cf5 conf.d\cf2           mime.types  nginx.conf      nginx.conf.rpmsave  \cf5 sites-available\cf2   uwsgi_params\
+\cf5 ..\cf2   fastcgi_params  \cf6 modules\cf2      nginx.conf.org  scgi_params         \cf5 sites-enabled\cf2 \
+[root@deploy /]# \
+[root@deploy /]# \
+[root@deploy /]# cd /etc/nginx/\
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# cp -p nginx.conf nginx.conf.org[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# vi nginx.conf\
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# nginx -t\
+nginx: [warn] conflicting server name "localhost" on 0.0.0.0:80, ignored\
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\
+nginx: configuration file /etc/nginx/nginx.conf test is successful\
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# mv /etc/nginx/conf.d/default.conf /etc/nginx/sites-available/[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# ls -a /etc/nginx/sites-available/\
+\cf5 .\cf2   \cf5 ..\cf2   default.conf  \
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# vi /etc/nginx/sites-available/www.testdom.conf\
+[root@deploy nginx]# vi /etc/nginx/sites-available/www.testdom2.com.conf\
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# ls -a /etc/nginx/sites-available/\
+\cf5 .\cf2   \cf5 ..\cf2   default.conf  www.testdom.conf  www.testdom2.com.conf\
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.com.conf[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# ln -s /etc/nginx/sites-available/www.testdom.com.conf /etc/nginx/sites-enabled/www.testdom.com.conf[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# ln -s /etc/nginx/sites-available/www.testdom2.com.conf /etc/nginx/sites-enabled/www.testdom2.com.conf[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# ls -a /etc/nginx/sites-enabled/\
+\cf5 .\cf2   \cf5 ..\cf2   \cf6 default.com.conf\cf2   \cf7 \cb8 www.testdom.com.conf\cf2 \cb1   \cf6 www.testdom2.com.conf\cf2 \
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# nginx -t\
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\
+nginx: configuration file /etc/nginx/nginx.conf test is successful\
+[root@deploy nginx]# \
+[root@deploy nginx]# \
+[root@deploy nginx]# systemctl restart nginx\
+[root@deploy nginx]# \
+[root@deploy nginx]# }
