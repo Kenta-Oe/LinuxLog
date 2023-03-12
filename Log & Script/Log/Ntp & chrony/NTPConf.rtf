@@ -1,0 +1,26 @@
+[root@honban ~]$ 
+[root@honban ~]$ getent hosts ntp.nict.go.jp
+133.243.238.163 ntp.nict.go.jp
+133.243.238.243 ntp.nict.go.jp
+133.243.238.164 ntp.nict.go.jp
+133.243.238.244 ntp.nict.go.jp
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ vi /etc/chrony.conf
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ systemctl restart chronyd
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ chronyc sources
+210 Number of sources = 4
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^+ ntp-b2.nict.go.jp             1   6    17    13  -1904us[+1946us] +/-   20ms
+^? ntp-a3.nict.go.jp             0   6     0     -     +0ns[   +0ns] +/-    0ns
+^+ ntp-a2.nict.go.jp             1   6    17    13  +7816us[  +12ms] +/- 9318us
+^* ntp-k1.nict.jp                1   6    17    13  -3680us[ +171us] +/-   26ms
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ 

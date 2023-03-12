@@ -1,0 +1,121 @@
+[root@honban ~]$ 
+[root@honban ~]$ ＃ yum install chrony
+-bash: ＃: コマンドが見つかりません
+[root@honban ~]$ yum install chrony
+読み込んだプラグイン:fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: ftp-srv2.kddilabs.jp
+ * extras: ftp-srv2.kddilabs.jp
+ * updates: ftp-srv2.kddilabs.jp
+base                                                                               | 3.6 kB  00:00:00     
+extras                                                                             | 2.9 kB  00:00:00     
+updates                                                                            | 2.9 kB  00:00:00     
+依存性の解決をしています
+--> トランザクションの確認を実行しています。
+---> パッケージ chrony.x86_64 0:3.4-1.el7 を インストール
+--> 依存性解決を終了しました。
+
+依存性を解決しました
+
+==========================================================================================================
+ Package                 アーキテクチャー        バージョン                   リポジトリー           容量
+==========================================================================================================
+インストール中:
+ chrony                  x86_64                  3.4-1.el7                    base                  251 k
+
+トランザクションの要約
+==========================================================================================================
+インストール  1 パッケージ
+
+総ダウンロード容量: 251 k
+インストール容量: 491 k
+Is this ok [y/d/N]: y
+Downloading packages:
+警告: /var/cache/yum/x86_64/7/base/packages/chrony-3.4-1.el7.x86_64.rpm: ヘッダー V3 RSA/SHA256 Signature、鍵 ID f4a80eb5: NOKEY
+chrony-3.4-1.el7.x86_64.rpm の公開鍵がインストールされていません
+chrony-3.4-1.el7.x86_64.rpm                                                        | 251 kB  00:00:00     
+file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7 から鍵を取得中です。
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-9.2009.0.el7.centos.x86_64 (@anaconda)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+上記の処理を行います。よろしいでしょうか？ [y/N]y
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  インストール中          : chrony-3.4-1.el7.x86_64                                                   1/1 
+  検証中                  : chrony-3.4-1.el7.x86_64                                                   1/1 
+
+インストール:
+  chrony.x86_64 0:3.4-1.el7                                                                               
+
+完了しました!
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ cp -p /etc/chrony.conf /etc/chrony.conf_bk
+[root@honban ~]$ 
+[root@honban ~]$ ls -l /etc/chrony.conf_bk
+-rw-r--r--. 1 root root 1108  8月  8  2019 /etc/chrony.conf_bk
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ vi /etc/chrony.conf
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ systemctl start chronyd
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ systemctl status chronyd
+● chronyd.service - NTP client/server
+   Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; vendor preset: enabled)
+   Active: active (running) since 木 2023-02-09 22:46:50 JST; 5s ago
+     Docs: man:chronyd(8)
+           man:chrony.conf(5)
+  Process: 1712 ExecStartPost=/usr/libexec/chrony-helper update-daemon (code=exited, status=0/SUCCESS)
+  Process: 1708 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+ Main PID: 1710 (chronyd)
+   CGroup: /system.slice/chronyd.service
+           └─1710 /usr/sbin/chronyd
+
+ 2月 09 22:46:50 honban systemd[1]: Starting NTP client/server...
+ 2月 09 22:46:50 honban chronyd[1710]: chronyd version 3.4 starting (+CMDMON +NTP +REFCLOCK +RTC +...BUG)
+ 2月 09 22:46:50 honban chronyd[1710]: Initial frequency -1044.496 ppm
+ 2月 09 22:46:50 honban systemd[1]: Started NTP client/server.
+ 2月 09 22:46:59 honban chronyd[1710]: Selected source 133.243.238.164
+ 2月 09 22:46:59 honban chronyd[1710]: System clock wrong by -3.275411 seconds, adjustment started
+ 2月 09 22:46:56 honban chronyd[1710]: System clock was stepped by -3.275411 seconds
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ systemctl enable chronyd
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ chronyc sources
+210 Number of sources = 6
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^- time.cloudflare.com           3   6    17    34    -14ms[-3591us] +/-   94ms
+^- 133.100.9.2                   1   6    17    34   -733us[+9507us] +/-   39ms
+^+ v160-16-113-133.ntp.tky2>     3   6    17    34  -5191us[+5049us] +/-   21ms
+^+ ntp-a2.nict.go.jp             1   6    17    35  -7168us[+3072us] +/-   20ms
+^* ntp-b3.nict.go.jp             1   6    17    34    -11ms[ -935us] +/-   29ms
+^- ntp2.jst.mfeed.ad.jp          2   6    17    36  +1311us[  +12ms] +/-   64ms
+[root@honban ~]$ 
+[root@honban ~]$ 
+[root@honban ~]$ chronyc tracking
+Reference ID    : 7F7F0101 ()
+Stratum         : 10
+Ref time (UTC)  : Thu Feb 09 13:47:40 2023
+System time     : 0.000009315 seconds slow of NTP time
+Last offset     : +0.010240331 seconds
+RMS offset      : 0.010240331 seconds
+Frequency       : 1044.496 ppm slow
+Residual freq   : +0.000 ppm
+Skew            : 0.000 ppm
+Root delay      : 0.000000000 seconds
+Root dispersion : 0.000000000 seconds
+Update interval : 2.1 seconds
+Leap status     : Normal
+[root@honban ~]$ 
+[root@honban ~]$ 

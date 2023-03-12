@@ -1,0 +1,34 @@
+      1 #!/bin/bash
+      2 
+      3 # /etc/passwdから引数で指定したユーザー名を検索し、その結果をUSERファイルに書き込む
+      4 cat /etc/passwd | grep $1 | echo $? > USER
+      5 
+      6 # USERファイルの中身を変数に代入する
+      7 USER=$(cat USER)
+      8 
+      9 # USERファイルに0が書き込まれていた場合、ユーザー削除の確認を行う
+     10 if [ "$USER" == "0" ]; then
+     11   echo -e "Delete User? (Yes or No)"
+     12   read answer
+     13 
+     14   # ユーザー削除の確認に対する回答によって処理を分岐する
+     15   if [ "$answer" == "yes" ] || ["#answer" == "Yes" ]; then
+     16     userdel $1
+     17     sleep 1
+     18     echo "rm -i /home/$1"
+     19     rm -ir /home/$1
+     20 
+     21     sleep 1
+     22     echo ""
+     23     echo "cat /etc/passwd"
+     24     cat /etc/passwd
+     25   elif [ "$answer" == "no" ] || ["#answer" == "No" ]; then
+     26     echo "Stop userdel"
+     27   else
+     28     echo "Please input yes or no"
+     29   fi
+     30 
+     31 # USERファイルに1が書き込まれていた場合、対象のユーザーが存在しないことを表示する
+     32 else
+     33   echo "No search user"
+     34 fi
