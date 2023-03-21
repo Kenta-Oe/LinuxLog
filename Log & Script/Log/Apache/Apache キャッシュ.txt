@@ -1,0 +1,44 @@
+[root@deploy ~]# 
+[root@deploy ~]# date
+2023年  3月 18日 土曜日 16:21:14 JST
+[root@deploy ~]# 
+[root@deploy ~]# 
+[root@deploy ~]# rpm -q httpd | grep http
+httpd-2.4.6-98.el7.centos.6.x86_64
+[root@deploy ~]# 
+[root@deploy ~]# 
+[root@deploy ~]# 
+[root@deploy ~]# cp -p /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf_$(date +"%Y%m%d")
+[root@deploy ~]# 
+[root@deploy ~]# 
+[root@deploy ~]# ls -l /etc/httpd/conf/httpd.con*
+-rw-r--r--. 1 root root 12126  3月 12 05:47 /etc/httpd/conf/httpd.conf
+-rw-r--r--. 1 root root 11753  3月 11 17:46 /etc/httpd/conf/httpd.conf.org20230311
+-rw-r--r--. 1 root root 12126  3月 12 05:47 /etc/httpd/conf/httpd.conf_20230318
+[root@deploy ~]# 
+[root@deploy ~]# 
+[root@deploy ~]# 
+[root@deploy ~]# vi /etc/httpd/conf/httpd.conf 
+--------------------------------------------------------
+    380 
+    381 
+    382 <IfModule mod_cache.c>
+    383     CacheRoot /var/cache/mod_cache
+    384     CacheEnable disk /
+    385     CacheDirLevels 2
+    386     CacheDirLength 1
+    387     CacheMinFileSize 1024
+    388     CacheMaxFileSize 5242880
+    389     CacheIgnoreNoLastMod On
+    390     CacheDefaultExpire 3600
+    391     CacheLastModifiedFactor 0.1
+    392 </IfModule>
+--------------------------------------------------------
+[root@deploy ~]# 
+[root@deploy ~]# 
+[root@deploy ~]# cat /etc/httpd/conf/httpd.conf | grep mod_cache.so 
+LoadModule cache_module modules/mod_cache.so
+[root@deploy ~]# 
+[root@deploy ~]# cat /etc/httpd/conf/httpd.conf | grep mod_cache_disk.so
+LoadModule cache_disk_module modules/mod_cache_disk.so
+[root@deploy ~]# 
