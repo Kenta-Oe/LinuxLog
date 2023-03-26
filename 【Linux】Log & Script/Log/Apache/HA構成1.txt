@@ -1,0 +1,1144 @@
+[root@sample ~]# date
+2023年  3月 26日 日曜日 15:35:34 JST
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# uname -n
+sample
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# uname -r
+3.10.0-1160.88.1.el7.x86_64
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# yum update
+読み込んだプラグイン:fastestmirror
+Determining fastest mirrors
+ * base: ftp.jaist.ac.jp
+ * extras: ftp.jaist.ac.jp
+ * updates: ftp.jaist.ac.jp
+base                                                     | 3.6 kB     00:00     
+extras                                                   | 2.9 kB     00:00     
+updates                                                  | 2.9 kB     00:00     
+updates/7/x86_64/primary_db                                |  20 MB   00:07     
+依存性の解決をしています
+--> トランザクションの確認を実行しています。
+---> パッケージ nss.x86_64 0:3.79.0-4.el7_9 を 更新
+---> パッケージ nss.x86_64 0:3.79.0-5.el7_9 を アップデート
+---> パッケージ nss-sysinit.x86_64 0:3.79.0-4.el7_9 を 更新
+---> パッケージ nss-sysinit.x86_64 0:3.79.0-5.el7_9 を アップデート
+---> パッケージ nss-tools.x86_64 0:3.79.0-4.el7_9 を 更新
+---> パッケージ nss-tools.x86_64 0:3.79.0-5.el7_9 を アップデート
+---> パッケージ openssl.x86_64 1:1.0.2k-25.el7_9 を 更新
+---> パッケージ openssl.x86_64 1:1.0.2k-26.el7_9 を アップデート
+---> パッケージ openssl-libs.x86_64 1:1.0.2k-25.el7_9 を 更新
+---> パッケージ openssl-libs.x86_64 1:1.0.2k-26.el7_9 を アップデート
+--> 依存性解決を終了しました。
+
+依存性を解決しました
+
+================================================================================
+ Package            アーキテクチャー
+                                 バージョン                 リポジトリー   容量
+================================================================================
+更新します:
+ nss                x86_64       3.79.0-5.el7_9             updates       895 k
+ nss-sysinit        x86_64       3.79.0-5.el7_9             updates        66 k
+ nss-tools          x86_64       3.79.0-5.el7_9             updates       555 k
+ openssl            x86_64       1:1.0.2k-26.el7_9          updates       494 k
+ openssl-libs       x86_64       1:1.0.2k-26.el7_9          updates       1.2 M
+
+トランザクションの要約
+================================================================================
+更新  5 パッケージ
+
+総ダウンロード容量: 3.2 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/5): nss-sysinit-3.79.0-5.el7_9.x86_64.rpm               |  66 kB   00:03     
+(2/5): nss-3.79.0-5.el7_9.x86_64.rpm                       | 895 kB   00:04     
+(3/5): nss-tools-3.79.0-5.el7_9.x86_64.rpm                 | 555 kB   00:00     
+(4/5): openssl-1.0.2k-26.el7_9.x86_64.rpm                  | 494 kB   00:00     
+(5/5): openssl-libs-1.0.2k-26.el7_9.x86_64.rpm             | 1.2 MB   00:00     
+--------------------------------------------------------------------------------
+合計                                               700 kB/s | 3.2 MB  00:04     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  更新します              : nss-sysinit-3.79.0-5.el7_9.x86_64              1/10 
+  更新します              : nss-3.79.0-5.el7_9.x86_64                      2/10 
+  更新します              : 1:openssl-libs-1.0.2k-26.el7_9.x86_64          3/10 
+  更新します              : 1:openssl-1.0.2k-26.el7_9.x86_64               4/10 
+  更新します              : nss-tools-3.79.0-5.el7_9.x86_64                5/10 
+  整理中                  : 1:openssl-1.0.2k-25.el7_9.x86_64               6/10 
+  整理中                  : nss-tools-3.79.0-4.el7_9.x86_64                7/10 
+  整理中                  : nss-sysinit-3.79.0-4.el7_9.x86_64              8/10 
+  整理中                  : nss-3.79.0-4.el7_9.x86_64                      9/10 
+  整理中                  : 1:openssl-libs-1.0.2k-25.el7_9.x86_64         10/10 
+  検証中                  : nss-3.79.0-5.el7_9.x86_64                      1/10 
+  検証中                  : nss-sysinit-3.79.0-5.el7_9.x86_64              2/10 
+  検証中                  : 1:openssl-libs-1.0.2k-26.el7_9.x86_64          3/10 
+  検証中                  : nss-tools-3.79.0-5.el7_9.x86_64                4/10 
+  検証中                  : 1:openssl-1.0.2k-26.el7_9.x86_64               5/10 
+  検証中                  : nss-tools-3.79.0-4.el7_9.x86_64                6/10 
+  検証中                  : 1:openssl-libs-1.0.2k-25.el7_9.x86_64          7/10 
+  検証中                  : 1:openssl-1.0.2k-25.el7_9.x86_64               8/10 
+  検証中                  : nss-sysinit-3.79.0-4.el7_9.x86_64              9/10 
+  検証中                  : nss-3.79.0-4.el7_9.x86_64                     10/10 
+
+更新:
+  nss.x86_64 0:3.79.0-5.el7_9             nss-sysinit.x86_64 0:3.79.0-5.el7_9  
+  nss-tools.x86_64 0:3.79.0-5.el7_9       openssl.x86_64 1:1.0.2k-26.el7_9     
+  openssl-libs.x86_64 1:1.0.2k-26.el7_9  
+
+完了しました!
+[root@sample ~]# rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# yum install -y https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
+読み込んだプラグイン:fastestmirror
+elrepo-release-7.el7.elrepo.noarch.rpm                   | 8.7 kB     00:00     
+/var/tmp/yum-root-DI7tdv/elrepo-release-7.el7.elrepo.noarch.rpm を調べています: elrepo-release-7.0-6.el7.elrepo.noarch
+/var/tmp/yum-root-DI7tdv/elrepo-release-7.el7.elrepo.noarch.rpm をインストール済みとして設定しています
+依存性の解決をしています
+--> トランザクションの確認を実行しています。
+---> パッケージ elrepo-release.noarch 0:7.0-6.el7.elrepo を インストール
+--> 依存性解決を終了しました。
+
+依存性を解決しました
+
+================================================================================
+ Package      アーキテクチャー
+                     バージョン       リポジトリー                         容量
+================================================================================
+インストール中:
+ elrepo-release
+              noarch 7.0-6.el7.elrepo /elrepo-release-7.el7.elrepo.noarch 5.0 k
+
+トランザクションの要約
+================================================================================
+インストール  1 パッケージ
+
+合計容量: 5.0 k
+インストール容量: 5.0 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  インストール中          : elrepo-release-7.0-6.el7.elrepo.noarch          1/1 
+  検証中                  : elrepo-release-7.0-6.el7.elrepo.noarch          1/1 
+
+インストール:
+  elrepo-release.noarch 0:7.0-6.el7.elrepo                                      
+
+完了しました!
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# yum install -y drbd90-utils kmod-drbd90
+読み込んだプラグイン:fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: ftp.jaist.ac.jp
+ * elrepo: ftp.ne.jp
+ * extras: ftp.jaist.ac.jp
+ * updates: ftp.jaist.ac.jp
+elrepo                                                   | 3.0 kB     00:00     
+elrepo/primary_db                                          | 457 kB   00:04     
+依存性の解決をしています
+--> トランザクションの確認を実行しています。
+---> パッケージ drbd90-utils.x86_64 0:9.23.1-1.el7.elrepo を インストール
+---> パッケージ kmod-drbd90.x86_64 0:9.1.13-1.el7_9.elrepo を インストール
+--> 依存性解決を終了しました。
+
+依存性を解決しました
+
+================================================================================
+ Package            アーキテクチャー
+                                 バージョン                  リポジトリー  容量
+================================================================================
+インストール中:
+ drbd90-utils       x86_64       9.23.1-1.el7.elrepo         elrepo       768 k
+ kmod-drbd90        x86_64       9.1.13-1.el7_9.elrepo       elrepo       294 k
+
+トランザクションの要約
+================================================================================
+インストール  2 パッケージ
+
+総ダウンロード容量: 1.0 M
+インストール容量: 2.9 M
+Downloading packages:
+(1/2): drbd90-utils-9.23.1-1.el7.elrepo.x86_64.rpm         | 768 kB   00:00     
+(2/2): kmod-drbd90-9.1.13-1.el7_9.elrepo.x86_64.rpm        | 294 kB   00:01     
+--------------------------------------------------------------------------------
+合計                                               780 kB/s | 1.0 MB  00:01     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  インストール中          : drbd90-utils-9.23.1-1.el7.elrepo.x86_64         1/2 
+  インストール中          : kmod-drbd90-9.1.13-1.el7_9.elrepo.x86_64        2/2 
+Working. This may take some time ...
+Done.
+  検証中                  : drbd90-utils-9.23.1-1.el7.elrepo.x86_64                                                                         1/2 
+  検証中                  : kmod-drbd90-9.1.13-1.el7_9.elrepo.x86_64                                                                        2/2 
+
+インストール:
+  drbd90-utils.x86_64 0:9.23.1-1.el7.elrepo                              kmod-drbd90.x86_64 0:9.1.13-1.el7_9.elrepo                             
+
+完了しました!
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# yum install -y httpd keepalived corosync pcs pacemaker
+読み込んだプラグイン:fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: ftp.jaist.ac.jp
+ * elrepo: ftp.ne.jp
+ * extras: ftp.jaist.ac.jp
+ * updates: ftp.jaist.ac.jp
+依存性の解決をしています
+--> トランザクションの確認を実行しています。
+---> パッケージ corosync.x86_64 0:2.4.5-7.el7_9.2 を インストール
+--> 依存性の処理をしています: corosynclib(x86-64) = 2.4.5-7.el7_9.2 のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libxslt のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libvotequorum.so.8(COROSYNC_VOTEQUORUM_1.0)(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libquorum.so.5(COROSYNC_QUORUM_1.0)(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcpg.so.4(COROSYNC_CPG_1.0)(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcmap.so.4(COROSYNC_CMAP_1.0)(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcgroup.so.1(CGROUP_0.32.1)(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcgroup.so.1(CGROUP_0.32)(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcfg.so.6(COROSYNC_CFG_0.82)(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libvotequorum.so.8()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libtotem_pg.so.5()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libquorum.so.5()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libqb.so.0()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libnetsnmp.so.31()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcpg.so.4()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcorosync_common.so.4()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcmap.so.4()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcgroup.so.1()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+--> 依存性の処理をしています: libcfg.so.6()(64bit) のパッケージ: corosync-2.4.5-7.el7_9.2.x86_64
+---> パッケージ httpd.x86_64 0:2.4.6-98.el7.centos.6 を インストール
+--> 依存性の処理をしています: httpd-tools = 2.4.6-98.el7.centos.6 のパッケージ: httpd-2.4.6-98.el7.centos.6.x86_64
+--> 依存性の処理をしています: /etc/mime.types のパッケージ: httpd-2.4.6-98.el7.centos.6.x86_64
+--> 依存性の処理をしています: libaprutil-1.so.0()(64bit) のパッケージ: httpd-2.4.6-98.el7.centos.6.x86_64
+--> 依存性の処理をしています: libapr-1.so.0()(64bit) のパッケージ: httpd-2.4.6-98.el7.centos.6.x86_64
+---> パッケージ keepalived.x86_64 0:1.3.5-19.el7 を インストール
+--> 依存性の処理をしています: libnetsnmpmibs.so.31()(64bit) のパッケージ: keepalived-1.3.5-19.el7.x86_64
+--> 依存性の処理をしています: libnetsnmpagent.so.31()(64bit) のパッケージ: keepalived-1.3.5-19.el7.x86_64
+---> パッケージ pacemaker.x86_64 0:1.1.23-1.el7_9.1 を インストール
+--> 依存性の処理をしています: pacemaker-libs(x86-64) = 1.1.23-1.el7_9.1 のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: pacemaker-cluster-libs(x86-64) = 1.1.23-1.el7_9.1 のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: pacemaker-cli = 1.1.23-1.el7_9.1 のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: resource-agents のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libgnutls.so.28(GNUTLS_1_4)(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libtransitioner.so.2()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libstonithd.so.2()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libpengine.so.16()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libpe_status.so.16()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libpe_rules.so.2()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: liblrmd.so.1()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libgnutls.so.28()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libcrmservice.so.3()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libcrmcommon.so.3()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libcrmcluster.so.4()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+--> 依存性の処理をしています: libcib.so.4()(64bit) のパッケージ: pacemaker-1.1.23-1.el7_9.1.x86_64
+---> パッケージ pcs.x86_64 0:0.9.169-3.el7.centos.3 を インストール
+--> 依存性の処理をしています: ruby >= 2.0.0 のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: python-clufter >= 0.59.0 のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: rubygem-json のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: python2-subprocess32 のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: python-setuptools のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: python-lxml のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: psmisc のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: overpass-fonts のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: liberation-sans-fonts のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: /usr/bin/ruby のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> 依存性の処理をしています: libruby.so.2.0()(64bit) のパッケージ: pcs-0.9.169-3.el7.centos.3.x86_64
+--> トランザクションの確認を実行しています。
+---> パッケージ apr.x86_64 0:1.4.8-7.el7 を インストール
+---> パッケージ apr-util.x86_64 0:1.5.2-6.el7 を インストール
+---> パッケージ corosynclib.x86_64 0:2.4.5-7.el7_9.2 を インストール
+---> パッケージ gnutls.x86_64 0:3.3.29-9.el7_6 を インストール
+--> 依存性の処理をしています: trousers >= 0.3.11.2 のパッケージ: gnutls-3.3.29-9.el7_6.x86_64
+--> 依存性の処理をしています: libnettle.so.4()(64bit) のパッケージ: gnutls-3.3.29-9.el7_6.x86_64
+--> 依存性の処理をしています: libhogweed.so.2()(64bit) のパッケージ: gnutls-3.3.29-9.el7_6.x86_64
+---> パッケージ httpd-tools.x86_64 0:2.4.6-98.el7.centos.6 を インストール
+---> パッケージ libcgroup.x86_64 0:0.41-21.el7 を インストール
+---> パッケージ liberation-sans-fonts.noarch 1:1.07.2-16.el7 を インストール
+--> 依存性の処理をしています: liberation-fonts-common = 1:1.07.2-16.el7 のパッケージ: 1:liberation-sans-fonts-1.07.2-16.el7.noarch
+---> パッケージ libqb.x86_64 0:1.0.1-9.el7 を インストール
+---> パッケージ libxslt.x86_64 0:1.1.28-6.el7 を インストール
+---> パッケージ mailcap.noarch 0:2.1.41-2.el7 を インストール
+---> パッケージ net-snmp-agent-libs.x86_64 1:5.7.2-49.el7_9.2 を インストール
+--> 依存性の処理をしています: perl(:MODULE_COMPAT_5.16.3) のパッケージ: 1:net-snmp-agent-libs-5.7.2-49.el7_9.2.x86_64
+--> 依存性の処理をしています: libsensors.so.4()(64bit) のパッケージ: 1:net-snmp-agent-libs-5.7.2-49.el7_9.2.x86_64
+--> 依存性の処理をしています: libperl.so()(64bit) のパッケージ: 1:net-snmp-agent-libs-5.7.2-49.el7_9.2.x86_64
+---> パッケージ net-snmp-libs.x86_64 1:5.7.2-49.el7_9.2 を インストール
+---> パッケージ overpass-fonts.noarch 0:2.1-1.el7 を インストール
+--> 依存性の処理をしています: fontpackages-filesystem のパッケージ: overpass-fonts-2.1-1.el7.noarch
+---> パッケージ pacemaker-cli.x86_64 0:1.1.23-1.el7_9.1 を インストール
+--> 依存性の処理をしています: perl-TimeDate のパッケージ: pacemaker-cli-1.1.23-1.el7_9.1.x86_64
+---> パッケージ pacemaker-cluster-libs.x86_64 0:1.1.23-1.el7_9.1 を インストール
+---> パッケージ pacemaker-libs.x86_64 0:1.1.23-1.el7_9.1 を インストール
+---> パッケージ psmisc.x86_64 0:22.20-17.el7 を インストール
+---> パッケージ python-clufter.noarch 0:0.77.1-1.el7 を インストール
+--> 依存性の処理をしています: clufter-bin = 0.77.1-1.el7 のパッケージ: python-clufter-0.77.1-1.el7.noarch
+---> パッケージ python-lxml.x86_64 0:3.2.1-4.el7 を インストール
+---> パッケージ python-setuptools.noarch 0:0.9.8-7.el7 を インストール
+--> 依存性の処理をしています: python-backports-ssl_match_hostname のパッケージ: python-setuptools-0.9.8-7.el7.noarch
+---> パッケージ python2-subprocess32.x86_64 0:3.2.6-14.el7 を インストール
+---> パッケージ resource-agents.x86_64 0:4.1.1-61.el7_9.18 を インストール
+--> 依存性の処理をしています: /usr/sbin/rpc.nfsd のパッケージ: resource-agents-4.1.1-61.el7_9.18.x86_64
+--> 依存性の処理をしています: /usr/sbin/rpc.mountd のパッケージ: resource-agents-4.1.1-61.el7_9.18.x86_64
+--> 依存性の処理をしています: /usr/sbin/mount.cifs のパッケージ: resource-agents-4.1.1-61.el7_9.18.x86_64
+--> 依存性の処理をしています: /sbin/rpc.statd のパッケージ: resource-agents-4.1.1-61.el7_9.18.x86_64
+--> 依存性の処理をしています: /sbin/mount.nfs4 のパッケージ: resource-agents-4.1.1-61.el7_9.18.x86_64
+--> 依存性の処理をしています: /sbin/mount.nfs のパッケージ: resource-agents-4.1.1-61.el7_9.18.x86_64
+--> 依存性の処理をしています: /bin/netstat のパッケージ: resource-agents-4.1.1-61.el7_9.18.x86_64
+---> パッケージ ruby.x86_64 0:2.0.0.648-39.el7_9 を インストール
+--> 依存性の処理をしています: rubygem(bigdecimal) >= 1.2.0 のパッケージ: ruby-2.0.0.648-39.el7_9.x86_64
+--> 依存性の処理をしています: ruby(rubygems) >= 2.0.14.1 のパッケージ: ruby-2.0.0.648-39.el7_9.x86_64
+---> パッケージ ruby-libs.x86_64 0:2.0.0.648-39.el7_9 を インストール
+---> パッケージ rubygem-json.x86_64 0:1.7.7-39.el7_9 を インストール
+--> トランザクションの確認を実行しています。
+---> パッケージ cifs-utils.x86_64 0:6.2-10.el7 を インストール
+--> 依存性の処理をしています: libwbclient.so.0(WBCLIENT_0.9)(64bit) のパッケージ: cifs-utils-6.2-10.el7.x86_64
+--> 依存性の処理をしています: libtalloc.so.2(TALLOC_2.0.2)(64bit) のパッケージ: cifs-utils-6.2-10.el7.x86_64
+--> 依存性の処理をしています: keyutils のパッケージ: cifs-utils-6.2-10.el7.x86_64
+--> 依存性の処理をしています: libwbclient.so.0()(64bit) のパッケージ: cifs-utils-6.2-10.el7.x86_64
+--> 依存性の処理をしています: libtalloc.so.2()(64bit) のパッケージ: cifs-utils-6.2-10.el7.x86_64
+---> パッケージ clufter-bin.x86_64 0:0.77.1-1.el7 を インストール
+--> 依存性の処理をしています: clufter-common = 0.77.1-1.el7 のパッケージ: clufter-bin-0.77.1-1.el7.x86_64
+---> パッケージ fontpackages-filesystem.noarch 0:1.44-8.el7 を インストール
+---> パッケージ liberation-fonts-common.noarch 1:1.07.2-16.el7 を インストール
+---> パッケージ lm_sensors-libs.x86_64 0:3.4.0-8.20160601gitf9185e5.el7 を インストール
+---> パッケージ net-tools.x86_64 0:2.0-0.25.20131004git.el7 を インストール
+---> パッケージ nettle.x86_64 0:2.7.1-9.el7_9 を インストール
+---> パッケージ nfs-utils.x86_64 1:1.3.0-0.68.el7.2 を インストール
+--> 依存性の処理をしています: libtirpc >= 0.2.4-0.7 のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+--> 依存性の処理をしています: gssproxy >= 0.7.0-3 のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+--> 依存性の処理をしています: rpcbind のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+--> 依存性の処理をしています: quota のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+--> 依存性の処理をしています: libnfsidmap のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+--> 依存性の処理をしています: libevent のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+--> 依存性の処理をしています: libtirpc.so.1()(64bit) のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+--> 依存性の処理をしています: libnfsidmap.so.0()(64bit) のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+--> 依存性の処理をしています: libevent-2.0.so.5()(64bit) のパッケージ: 1:nfs-utils-1.3.0-0.68.el7.2.x86_64
+---> パッケージ perl.x86_64 4:5.16.3-299.el7_9 を インストール
+--> 依存性の処理をしています: perl(Socket) >= 1.3 のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Scalar::Util) >= 1.10 のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl-macros のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(threads::shared) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(threads) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(constant) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Time::Local) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Time::HiRes) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Storable) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Socket) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Scalar::Util) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Pod::Simple::XHTML) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Pod::Simple::Search) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Getopt::Long) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Filter::Util::Call) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(File::Temp) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(File::Spec::Unix) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(File::Spec::Functions) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(File::Spec) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(File::Path) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Exporter) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Cwd) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+--> 依存性の処理をしています: perl(Carp) のパッケージ: 4:perl-5.16.3-299.el7_9.x86_64
+---> パッケージ perl-TimeDate.noarch 1:2.30-2.el7 を インストール
+---> パッケージ perl-libs.x86_64 4:5.16.3-299.el7_9 を インストール
+---> パッケージ python-backports-ssl_match_hostname.noarch 0:3.5.0.1-1.el7 を インストール
+--> 依存性の処理をしています: python-ipaddress のパッケージ: python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch
+--> 依存性の処理をしています: python-backports のパッケージ: python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch
+---> パッケージ rubygem-bigdecimal.x86_64 0:1.2.0-39.el7_9 を インストール
+---> パッケージ rubygems.noarch 0:2.0.14.1-39.el7_9 を インストール
+--> 依存性の処理をしています: rubygem(rdoc) >= 4.0.0 のパッケージ: rubygems-2.0.14.1-39.el7_9.noarch
+--> 依存性の処理をしています: rubygem(psych) >= 2.0.0 のパッケージ: rubygems-2.0.14.1-39.el7_9.noarch
+--> 依存性の処理をしています: rubygem(io-console) >= 0.4.2 のパッケージ: rubygems-2.0.14.1-39.el7_9.noarch
+---> パッケージ trousers.x86_64 0:0.3.14-2.el7 を インストール
+--> トランザクションの確認を実行しています。
+---> パッケージ clufter-common.noarch 0:0.77.1-1.el7 を インストール
+---> パッケージ gssproxy.x86_64 0:0.7.0-30.el7_9 を インストール
+--> 依存性の処理をしています: libini_config >= 1.3.1-31 のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+--> 依存性の処理をしています: libverto-module-base のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+--> 依存性の処理をしています: libref_array.so.1(REF_ARRAY_0.1.1)(64bit) のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+--> 依存性の処理をしています: libini_config.so.3(INI_CONFIG_1.2.0)(64bit) のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+--> 依存性の処理をしています: libini_config.so.3(INI_CONFIG_1.1.0)(64bit) のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+--> 依存性の処理をしています: libref_array.so.1()(64bit) のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+--> 依存性の処理をしています: libini_config.so.3()(64bit) のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+--> 依存性の処理をしています: libcollection.so.2()(64bit) のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+--> 依存性の処理をしています: libbasicobjects.so.0()(64bit) のパッケージ: gssproxy-0.7.0-30.el7_9.x86_64
+---> パッケージ keyutils.x86_64 0:1.5.8-3.el7 を インストール
+---> パッケージ libevent.x86_64 0:2.0.21-4.el7 を インストール
+---> パッケージ libnfsidmap.x86_64 0:0.25-19.el7 を インストール
+---> パッケージ libtalloc.x86_64 0:2.1.16-1.el7 を インストール
+---> パッケージ libtirpc.x86_64 0:0.2.4-0.16.el7 を インストール
+---> パッケージ libwbclient.x86_64 0:4.10.16-24.el7_9 を インストール
+--> 依存性の処理をしています: samba-client-libs = 4.10.16-24.el7_9 のパッケージ: libwbclient-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libreplace-samba4.so(SAMBA_4.10.16)(64bit) のパッケージ: libwbclient-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libreplace-samba4.so()(64bit) のパッケージ: libwbclient-4.10.16-24.el7_9.x86_64
+---> パッケージ perl-Carp.noarch 0:1.26-244.el7 を インストール
+---> パッケージ perl-Exporter.noarch 0:5.68-3.el7 を インストール
+---> パッケージ perl-File-Path.noarch 0:2.09-2.el7 を インストール
+---> パッケージ perl-File-Temp.noarch 0:0.23.01-3.el7 を インストール
+---> パッケージ perl-Filter.x86_64 0:1.49-3.el7 を インストール
+---> パッケージ perl-Getopt-Long.noarch 0:2.40-3.el7 を インストール
+--> 依存性の処理をしています: perl(Pod::Usage) >= 1.14 のパッケージ: perl-Getopt-Long-2.40-3.el7.noarch
+--> 依存性の処理をしています: perl(Text::ParseWords) のパッケージ: perl-Getopt-Long-2.40-3.el7.noarch
+---> パッケージ perl-PathTools.x86_64 0:3.40-5.el7 を インストール
+---> パッケージ perl-Pod-Simple.noarch 1:3.28-4.el7 を インストール
+--> 依存性の処理をしています: perl(Pod::Escapes) >= 1.04 のパッケージ: 1:perl-Pod-Simple-3.28-4.el7.noarch
+--> 依存性の処理をしています: perl(Encode) のパッケージ: 1:perl-Pod-Simple-3.28-4.el7.noarch
+---> パッケージ perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 を インストール
+---> パッケージ perl-Socket.x86_64 0:2.010-5.el7 を インストール
+---> パッケージ perl-Storable.x86_64 0:2.45-3.el7 を インストール
+---> パッケージ perl-Time-HiRes.x86_64 4:1.9725-3.el7 を インストール
+---> パッケージ perl-Time-Local.noarch 0:1.2300-2.el7 を インストール
+---> パッケージ perl-constant.noarch 0:1.27-2.el7 を インストール
+---> パッケージ perl-macros.x86_64 4:5.16.3-299.el7_9 を インストール
+---> パッケージ perl-threads.x86_64 0:1.87-4.el7 を インストール
+---> パッケージ perl-threads-shared.x86_64 0:1.43-6.el7 を インストール
+---> パッケージ python-backports.x86_64 0:1.0-8.el7 を インストール
+---> パッケージ python-ipaddress.noarch 0:1.0.16-2.el7 を インストール
+---> パッケージ quota.x86_64 1:4.01-19.el7 を インストール
+--> 依存性の処理をしています: quota-nls = 1:4.01-19.el7 のパッケージ: 1:quota-4.01-19.el7.x86_64
+--> 依存性の処理をしています: tcp_wrappers のパッケージ: 1:quota-4.01-19.el7.x86_64
+---> パッケージ rpcbind.x86_64 0:0.2.0-49.el7 を インストール
+---> パッケージ rubygem-io-console.x86_64 0:0.4.2-39.el7_9 を インストール
+---> パッケージ rubygem-psych.x86_64 0:2.0.0-39.el7_9 を インストール
+--> 依存性の処理をしています: libyaml-0.so.2()(64bit) のパッケージ: rubygem-psych-2.0.0-39.el7_9.x86_64
+---> パッケージ rubygem-rdoc.noarch 0:4.0.0-39.el7_9 を インストール
+--> 依存性の処理をしています: ruby(irb) = 2.0.0.648 のパッケージ: rubygem-rdoc-4.0.0-39.el7_9.noarch
+--> トランザクションの確認を実行しています。
+---> パッケージ libbasicobjects.x86_64 0:0.1.1-32.el7 を インストール
+---> パッケージ libcollection.x86_64 0:0.7.0-32.el7 を インストール
+---> パッケージ libini_config.x86_64 0:1.3.1-32.el7 を インストール
+--> 依存性の処理をしています: libpath_utils.so.1(PATH_UTILS_0.2.1)(64bit) のパッケージ: libini_config-1.3.1-32.el7.x86_64
+--> 依存性の処理をしています: libpath_utils.so.1()(64bit) のパッケージ: libini_config-1.3.1-32.el7.x86_64
+---> パッケージ libref_array.x86_64 0:0.1.5-32.el7 を インストール
+---> パッケージ libverto-libevent.x86_64 0:0.2.5-4.el7 を インストール
+---> パッケージ libyaml.x86_64 0:0.1.4-11.el7_0 を インストール
+---> パッケージ perl-Encode.x86_64 0:2.51-7.el7 を インストール
+---> パッケージ perl-Pod-Escapes.noarch 1:1.04-299.el7_9 を インストール
+---> パッケージ perl-Pod-Usage.noarch 0:1.63-3.el7 を インストール
+--> 依存性の処理をしています: perl(Pod::Text) >= 3.15 のパッケージ: perl-Pod-Usage-1.63-3.el7.noarch
+--> 依存性の処理をしています: perl-Pod-Perldoc のパッケージ: perl-Pod-Usage-1.63-3.el7.noarch
+---> パッケージ perl-Text-ParseWords.noarch 0:3.29-4.el7 を インストール
+---> パッケージ quota-nls.noarch 1:4.01-19.el7 を インストール
+---> パッケージ ruby-irb.noarch 0:2.0.0.648-39.el7_9 を インストール
+---> パッケージ samba-client-libs.x86_64 0:4.10.16-24.el7_9 を インストール
+--> 依存性の処理をしています: samba-common-libs = 4.10.16-24.el7_9 のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: samba-common = 4.10.16-24.el7_9 のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: samba-common = 4.10.16-24.el7_9 のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.9)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.37)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.31)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.30)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.21)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.20)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.16)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.14)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.13)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0(TEVENT_0.9.12)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtdb.so.1(TDB_1.3.17)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtdb.so.1(TDB_1.3.11)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtdb.so.1(TDB_1.3.0)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtdb.so.1(TDB_1.2.5)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtdb.so.1(TDB_1.2.2)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtdb.so.1(TDB_1.2.1)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libldb.so.1(LDB_1.3.0)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libldb.so.1(LDB_1.1.30)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libldb.so.1(LDB_1.1.19)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libldb.so.1(LDB_1.1.1)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libldb.so.1(LDB_0.9.23)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libldb.so.1(LDB_0.9.15)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libldb.so.1(LDB_0.9.10)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libaesni-intel-samba4.so(SAMBA_4.10.16)(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtevent.so.0()(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libtdb.so.1()(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libldb.so.1()(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libcups.so.2()(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libcluster-samba4.so()(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libavahi-common.so.3()(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libavahi-client.so.3()(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+--> 依存性の処理をしています: libaesni-intel-samba4.so()(64bit) のパッケージ: samba-client-libs-4.10.16-24.el7_9.x86_64
+---> パッケージ tcp_wrappers.x86_64 0:7.6-77.el7 を インストール
+--> トランザクションの確認を実行しています。
+---> パッケージ avahi-libs.x86_64 0:0.6.31-20.el7 を インストール
+---> パッケージ cups-libs.x86_64 1:1.6.3-51.el7 を インストール
+---> パッケージ libldb.x86_64 0:1.5.4-2.el7 を インストール
+---> パッケージ libpath_utils.x86_64 0:0.2.1-32.el7 を インストール
+---> パッケージ libtdb.x86_64 0:1.3.18-1.el7 を インストール
+---> パッケージ libtevent.x86_64 0:0.9.39-1.el7 を インストール
+---> パッケージ perl-Pod-Perldoc.noarch 0:3.20-4.el7 を インストール
+--> 依存性の処理をしています: perl(parent) のパッケージ: perl-Pod-Perldoc-3.20-4.el7.noarch
+--> 依存性の処理をしています: perl(HTTP::Tiny) のパッケージ: perl-Pod-Perldoc-3.20-4.el7.noarch
+---> パッケージ perl-podlators.noarch 0:2.5.1-3.el7 を インストール
+---> パッケージ samba-common.noarch 0:4.10.16-24.el7_9 を インストール
+---> パッケージ samba-common-libs.x86_64 0:4.10.16-24.el7_9 を インストール
+--> トランザクションの確認を実行しています。
+---> パッケージ perl-HTTP-Tiny.noarch 0:0.033-3.el7 を インストール
+---> パッケージ perl-parent.noarch 1:0.225-244.el7 を インストール
+--> 依存性解決を終了しました。
+
+依存性を解決しました
+
+================================================================================================================================================
+ Package                                          アーキテクチャー    バージョン                                     リポジトリー          容量
+================================================================================================================================================
+インストール中:
+ corosync                                         x86_64              2.4.5-7.el7_9.2                                updates              222 k
+ httpd                                            x86_64              2.4.6-98.el7.centos.6                          updates              2.7 M
+ keepalived                                       x86_64              1.3.5-19.el7                                   base                 332 k
+ pacemaker                                        x86_64              1.1.23-1.el7_9.1                               updates              481 k
+ pcs                                              x86_64              0.9.169-3.el7.centos.3                         updates              4.2 M
+依存性関連でのインストールをします:
+ apr                                              x86_64              1.4.8-7.el7                                    base                 104 k
+ apr-util                                         x86_64              1.5.2-6.el7                                    base                  92 k
+ avahi-libs                                       x86_64              0.6.31-20.el7                                  base                  62 k
+ cifs-utils                                       x86_64              6.2-10.el7                                     base                  85 k
+ clufter-bin                                      x86_64              0.77.1-1.el7                                   base                  25 k
+ clufter-common                                   noarch              0.77.1-1.el7                                   base                  72 k
+ corosynclib                                      x86_64              2.4.5-7.el7_9.2                                updates              137 k
+ cups-libs                                        x86_64              1:1.6.3-51.el7                                 base                 359 k
+ fontpackages-filesystem                          noarch              1.44-8.el7                                     base                 9.9 k
+ gnutls                                           x86_64              3.3.29-9.el7_6                                 base                 680 k
+ gssproxy                                         x86_64              0.7.0-30.el7_9                                 updates              111 k
+ httpd-tools                                      x86_64              2.4.6-98.el7.centos.6                          updates               94 k
+ keyutils                                         x86_64              1.5.8-3.el7                                    base                  54 k
+ libbasicobjects                                  x86_64              0.1.1-32.el7                                   base                  26 k
+ libcgroup                                        x86_64              0.41-21.el7                                    base                  66 k
+ libcollection                                    x86_64              0.7.0-32.el7                                   base                  42 k
+ liberation-fonts-common                          noarch              1:1.07.2-16.el7                                base                  27 k
+ liberation-sans-fonts                            noarch              1:1.07.2-16.el7                                base                 279 k
+ libevent                                         x86_64              2.0.21-4.el7                                   base                 214 k
+ libini_config                                    x86_64              1.3.1-32.el7                                   base                  64 k
+ libldb                                           x86_64              1.5.4-2.el7                                    updates              149 k
+ libnfsidmap                                      x86_64              0.25-19.el7                                    base                  50 k
+ libpath_utils                                    x86_64              0.2.1-32.el7                                   base                  28 k
+ libqb                                            x86_64              1.0.1-9.el7                                    base                  96 k
+ libref_array                                     x86_64              0.1.5-32.el7                                   base                  27 k
+ libtalloc                                        x86_64              2.1.16-1.el7                                   base                  33 k
+ libtdb                                           x86_64              1.3.18-1.el7                                   base                  49 k
+ libtevent                                        x86_64              0.9.39-1.el7                                   base                  41 k
+ libtirpc                                         x86_64              0.2.4-0.16.el7                                 base                  89 k
+ libverto-libevent                                x86_64              0.2.5-4.el7                                    base                 8.9 k
+ libwbclient                                      x86_64              4.10.16-24.el7_9                               updates              117 k
+ libxslt                                          x86_64              1.1.28-6.el7                                   base                 242 k
+ libyaml                                          x86_64              0.1.4-11.el7_0                                 base                  55 k
+ lm_sensors-libs                                  x86_64              3.4.0-8.20160601gitf9185e5.el7                 base                  42 k
+ mailcap                                          noarch              2.1.41-2.el7                                   base                  31 k
+ net-snmp-agent-libs                              x86_64              1:5.7.2-49.el7_9.2                             updates              707 k
+ net-snmp-libs                                    x86_64              1:5.7.2-49.el7_9.2                             updates              752 k
+ net-tools                                        x86_64              2.0-0.25.20131004git.el7                       base                 306 k
+ nettle                                           x86_64              2.7.1-9.el7_9                                  updates              328 k
+ nfs-utils                                        x86_64              1:1.3.0-0.68.el7.2                             updates              413 k
+ overpass-fonts                                   noarch              2.1-1.el7                                      base                 700 k
+ pacemaker-cli                                    x86_64              1.1.23-1.el7_9.1                               updates              365 k
+ pacemaker-cluster-libs                           x86_64              1.1.23-1.el7_9.1                               updates              164 k
+ pacemaker-libs                                   x86_64              1.1.23-1.el7_9.1                               updates              641 k
+ perl                                             x86_64              4:5.16.3-299.el7_9                             updates              8.0 M
+ perl-Carp                                        noarch              1.26-244.el7                                   base                  19 k
+ perl-Encode                                      x86_64              2.51-7.el7                                     base                 1.5 M
+ perl-Exporter                                    noarch              5.68-3.el7                                     base                  28 k
+ perl-File-Path                                   noarch              2.09-2.el7                                     base                  26 k
+ perl-File-Temp                                   noarch              0.23.01-3.el7                                  base                  56 k
+ perl-Filter                                      x86_64              1.49-3.el7                                     base                  76 k
+ perl-Getopt-Long                                 noarch              2.40-3.el7                                     base                  56 k
+ perl-HTTP-Tiny                                   noarch              0.033-3.el7                                    base                  38 k
+ perl-PathTools                                   x86_64              3.40-5.el7                                     base                  82 k
+ perl-Pod-Escapes                                 noarch              1:1.04-299.el7_9                               updates               52 k
+ perl-Pod-Perldoc                                 noarch              3.20-4.el7                                     base                  87 k
+ perl-Pod-Simple                                  noarch              1:3.28-4.el7                                   base                 216 k
+ perl-Pod-Usage                                   noarch              1.63-3.el7                                     base                  27 k
+ perl-Scalar-List-Utils                           x86_64              1.27-248.el7                                   base                  36 k
+ perl-Socket                                      x86_64              2.010-5.el7                                    base                  49 k
+ perl-Storable                                    x86_64              2.45-3.el7                                     base                  77 k
+ perl-Text-ParseWords                             noarch              3.29-4.el7                                     base                  14 k
+ perl-Time-HiRes                                  x86_64              4:1.9725-3.el7                                 base                  45 k
+ perl-Time-Local                                  noarch              1.2300-2.el7                                   base                  24 k
+ perl-TimeDate                                    noarch              1:2.30-2.el7                                   base                  52 k
+ perl-constant                                    noarch              1.27-2.el7                                     base                  19 k
+ perl-libs                                        x86_64              4:5.16.3-299.el7_9                             updates              690 k
+ perl-macros                                      x86_64              4:5.16.3-299.el7_9                             updates               44 k
+ perl-parent                                      noarch              1:0.225-244.el7                                base                  12 k
+ perl-podlators                                   noarch              2.5.1-3.el7                                    base                 112 k
+ perl-threads                                     x86_64              1.87-4.el7                                     base                  49 k
+ perl-threads-shared                              x86_64              1.43-6.el7                                     base                  39 k
+ psmisc                                           x86_64              22.20-17.el7                                   base                 141 k
+ python-backports                                 x86_64              1.0-8.el7                                      base                 5.8 k
+ python-backports-ssl_match_hostname              noarch              3.5.0.1-1.el7                                  base                  13 k
+ python-clufter                                   noarch              0.77.1-1.el7                                   base                 323 k
+ python-ipaddress                                 noarch              1.0.16-2.el7                                   base                  34 k
+ python-lxml                                      x86_64              3.2.1-4.el7                                    base                 758 k
+ python-setuptools                                noarch              0.9.8-7.el7                                    base                 397 k
+ python2-subprocess32                             x86_64              3.2.6-14.el7                                   base                  47 k
+ quota                                            x86_64              1:4.01-19.el7                                  base                 179 k
+ quota-nls                                        noarch              1:4.01-19.el7                                  base                  90 k
+ resource-agents                                  x86_64              4.1.1-61.el7_9.18                              updates              481 k
+ rpcbind                                          x86_64              0.2.0-49.el7                                   base                  60 k
+ ruby                                             x86_64              2.0.0.648-39.el7_9                             updates               73 k
+ ruby-irb                                         noarch              2.0.0.648-39.el7_9                             updates               94 k
+ ruby-libs                                        x86_64              2.0.0.648-39.el7_9                             updates              2.8 M
+ rubygem-bigdecimal                               x86_64              1.2.0-39.el7_9                                 updates               85 k
+ rubygem-io-console                               x86_64              0.4.2-39.el7_9                                 updates               56 k
+ rubygem-json                                     x86_64              1.7.7-39.el7_9                                 updates               82 k
+ rubygem-psych                                    x86_64              2.0.0-39.el7_9                                 updates               84 k
+ rubygem-rdoc                                     noarch              4.0.0-39.el7_9                                 updates              324 k
+ rubygems                                         noarch              2.0.14.1-39.el7_9                              updates              215 k
+ samba-client-libs                                x86_64              4.10.16-24.el7_9                               updates              5.0 M
+ samba-common                                     noarch              4.10.16-24.el7_9                               updates              219 k
+ samba-common-libs                                x86_64              4.10.16-24.el7_9                               updates              183 k
+ tcp_wrappers                                     x86_64              7.6-77.el7                                     base                  78 k
+ trousers                                         x86_64              0.3.14-2.el7                                   base                 289 k
+
+トランザクションの要約
+================================================================================================================================================
+インストール  5 パッケージ (+98 個の依存関係のパッケージ)
+
+総ダウンロード容量: 39 M
+インストール容量: 123 M
+Downloading packages:
+(1/103): apr-util-1.5.2-6.el7.x86_64.rpm                                                                                 |  92 kB  00:00:00     
+(2/103): apr-1.4.8-7.el7.x86_64.rpm                                                                                      | 104 kB  00:00:00     
+(3/103): avahi-libs-0.6.31-20.el7.x86_64.rpm                                                                             |  62 kB  00:00:00     
+(4/103): clufter-bin-0.77.1-1.el7.x86_64.rpm                                                                             |  25 kB  00:00:00     
+(5/103): cifs-utils-6.2-10.el7.x86_64.rpm                                                                                |  85 kB  00:00:00     
+(6/103): clufter-common-0.77.1-1.el7.noarch.rpm                                                                          |  72 kB  00:00:00     
+(7/103): fontpackages-filesystem-1.44-8.el7.noarch.rpm                                                                   | 9.9 kB  00:00:00     
+(8/103): cups-libs-1.6.3-51.el7.x86_64.rpm                                                                               | 359 kB  00:00:00     
+(9/103): gnutls-3.3.29-9.el7_6.x86_64.rpm                                                                                | 680 kB  00:00:00     
+(10/103): corosynclib-2.4.5-7.el7_9.2.x86_64.rpm                                                                         | 137 kB  00:00:10     
+(11/103): corosync-2.4.5-7.el7_9.2.x86_64.rpm                                                                            | 222 kB  00:00:10     
+(12/103): gssproxy-0.7.0-30.el7_9.x86_64.rpm                                                                             | 111 kB  00:00:00     
+(13/103): httpd-tools-2.4.6-98.el7.centos.6.x86_64.rpm                                                                   |  94 kB  00:00:00     
+(14/103): keyutils-1.5.8-3.el7.x86_64.rpm                                                                                |  54 kB  00:00:00     
+(15/103): keepalived-1.3.5-19.el7.x86_64.rpm                                                                             | 332 kB  00:00:00     
+(16/103): libcgroup-0.41-21.el7.x86_64.rpm                                                                               |  66 kB  00:00:00     
+(17/103): libbasicobjects-0.1.1-32.el7.x86_64.rpm                                                                        |  26 kB  00:00:00     
+(18/103): liberation-fonts-common-1.07.2-16.el7.noarch.rpm                                                               |  27 kB  00:00:00     
+(19/103): liberation-sans-fonts-1.07.2-16.el7.noarch.rpm                                                                 | 279 kB  00:00:00     
+(20/103): libini_config-1.3.1-32.el7.x86_64.rpm                                                                          |  64 kB  00:00:00     
+(21/103): libnfsidmap-0.25-19.el7.x86_64.rpm                                                                             |  50 kB  00:00:00     
+(22/103): libldb-1.5.4-2.el7.x86_64.rpm                                                                                  | 149 kB  00:00:00     
+(23/103): libevent-2.0.21-4.el7.x86_64.rpm                                                                               | 214 kB  00:00:00     
+(24/103): libpath_utils-0.2.1-32.el7.x86_64.rpm                                                                          |  28 kB  00:00:00     
+(25/103): libref_array-0.1.5-32.el7.x86_64.rpm                                                                           |  27 kB  00:00:00     
+(26/103): libtalloc-2.1.16-1.el7.x86_64.rpm                                                                              |  33 kB  00:00:00     
+(27/103): libtdb-1.3.18-1.el7.x86_64.rpm                                                                                 |  49 kB  00:00:00     
+(28/103): libtevent-0.9.39-1.el7.x86_64.rpm                                                                              |  41 kB  00:00:00     
+(29/103): libtirpc-0.2.4-0.16.el7.x86_64.rpm                                                                             |  89 kB  00:00:00     
+(30/103): libverto-libevent-0.2.5-4.el7.x86_64.rpm                                                                       | 8.9 kB  00:00:00     
+(31/103): libxslt-1.1.28-6.el7.x86_64.rpm                                                                                | 242 kB  00:00:00     
+(32/103): libyaml-0.1.4-11.el7_0.x86_64.rpm                                                                              |  55 kB  00:00:00     
+(33/103): lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64.rpm                                                      |  42 kB  00:00:00     
+(34/103): libqb-1.0.1-9.el7.x86_64.rpm                                                                                   |  96 kB  00:00:00     
+(35/103): mailcap-2.1.41-2.el7.noarch.rpm                                                                                |  31 kB  00:00:00     
+(36/103): libwbclient-4.10.16-24.el7_9.x86_64.rpm                                                                        | 117 kB  00:00:00     
+(37/103): net-snmp-agent-libs-5.7.2-49.el7_9.2.x86_64.rpm                                                                | 707 kB  00:00:00     
+(38/103): libcollection-0.7.0-32.el7.x86_64.rpm                                                                          |  42 kB  00:00:01     
+(39/103): nettle-2.7.1-9.el7_9.x86_64.rpm                                                                                | 328 kB  00:00:00     
+(40/103): httpd-2.4.6-98.el7.centos.6.x86_64.rpm                                                                         | 2.7 MB  00:00:03     
+(41/103): net-snmp-libs-5.7.2-49.el7_9.2.x86_64.rpm                                                                      | 752 kB  00:00:00     
+(42/103): nfs-utils-1.3.0-0.68.el7.2.x86_64.rpm                                                                          | 413 kB  00:00:00     
+(43/103): pacemaker-cluster-libs-1.1.23-1.el7_9.1.x86_64.rpm                                                             | 164 kB  00:00:00     
+(44/103): pacemaker-cli-1.1.23-1.el7_9.1.x86_64.rpm                                                                      | 365 kB  00:00:00     
+(45/103): net-tools-2.0-0.25.20131004git.el7.x86_64.rpm                                                                  | 306 kB  00:00:00     
+(46/103): pacemaker-1.1.23-1.el7_9.1.x86_64.rpm                                                                          | 481 kB  00:00:00     
+(47/103): pacemaker-libs-1.1.23-1.el7_9.1.x86_64.rpm                                                                     | 641 kB  00:00:00     
+(48/103): overpass-fonts-2.1-1.el7.noarch.rpm                                                                            | 700 kB  00:00:00     
+(49/103): perl-Exporter-5.68-3.el7.noarch.rpm                                                                            |  28 kB  00:00:00     
+(50/103): perl-File-Path-2.09-2.el7.noarch.rpm                                                                           |  26 kB  00:00:00     
+(51/103): perl-File-Temp-0.23.01-3.el7.noarch.rpm                                                                        |  56 kB  00:00:00     
+(52/103): perl-Carp-1.26-244.el7.noarch.rpm                                                                              |  19 kB  00:00:00     
+(53/103): perl-Filter-1.49-3.el7.x86_64.rpm                                                                              |  76 kB  00:00:00     
+(54/103): perl-HTTP-Tiny-0.033-3.el7.noarch.rpm                                                                          |  38 kB  00:00:00     
+(55/103): perl-Getopt-Long-2.40-3.el7.noarch.rpm                                                                         |  56 kB  00:00:00     
+(56/103): perl-PathTools-3.40-5.el7.x86_64.rpm                                                                           |  82 kB  00:00:00     
+(57/103): perl-Pod-Perldoc-3.20-4.el7.noarch.rpm                                                                         |  87 kB  00:00:00     
+(58/103): pcs-0.9.169-3.el7.centos.3.x86_64.rpm                                                                          | 4.2 MB  00:00:01     
+(59/103): perl-Encode-2.51-7.el7.x86_64.rpm                                                                              | 1.5 MB  00:00:01     
+(60/103): perl-Pod-Simple-3.28-4.el7.noarch.rpm                                                                          | 216 kB  00:00:00     
+(61/103): perl-Pod-Usage-1.63-3.el7.noarch.rpm                                                                           |  27 kB  00:00:00     
+(62/103): perl-Scalar-List-Utils-1.27-248.el7.x86_64.rpm                                                                 |  36 kB  00:00:00     
+(63/103): perl-Socket-2.010-5.el7.x86_64.rpm                                                                             |  49 kB  00:00:00     
+(64/103): perl-Storable-2.45-3.el7.x86_64.rpm                                                                            |  77 kB  00:00:00     
+(65/103): perl-Text-ParseWords-3.29-4.el7.noarch.rpm                                                                     |  14 kB  00:00:00     
+(66/103): perl-Time-HiRes-1.9725-3.el7.x86_64.rpm                                                                        |  45 kB  00:00:00     
+(67/103): perl-Time-Local-1.2300-2.el7.noarch.rpm                                                                        |  24 kB  00:00:00     
+(68/103): perl-TimeDate-2.30-2.el7.noarch.rpm                                                                            |  52 kB  00:00:00     
+(69/103): perl-constant-1.27-2.el7.noarch.rpm                                                                            |  19 kB  00:00:00     
+(70/103): perl-Pod-Escapes-1.04-299.el7_9.noarch.rpm                                                                     |  52 kB  00:00:00     
+(71/103): perl-libs-5.16.3-299.el7_9.x86_64.rpm                                                                          | 690 kB  00:00:00     
+(72/103): perl-macros-5.16.3-299.el7_9.x86_64.rpm                                                                        |  44 kB  00:00:00     
+(73/103): perl-threads-1.87-4.el7.x86_64.rpm                                                                             |  49 kB  00:00:00     
+(74/103): perl-5.16.3-299.el7_9.x86_64.rpm                                                                               | 8.0 MB  00:00:02     
+(75/103): perl-threads-shared-1.43-6.el7.x86_64.rpm                                                                      |  39 kB  00:00:00     
+(76/103): perl-parent-0.225-244.el7.noarch.rpm                                                                           |  12 kB  00:00:00     
+(77/103): psmisc-22.20-17.el7.x86_64.rpm                                                                                 | 141 kB  00:00:00     
+(78/103): python-backports-1.0-8.el7.x86_64.rpm                                                                          | 5.8 kB  00:00:00     
+(79/103): python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch.rpm                                                   |  13 kB  00:00:00     
+(80/103): perl-podlators-2.5.1-3.el7.noarch.rpm                                                                          | 112 kB  00:00:01     
+(81/103): python-clufter-0.77.1-1.el7.noarch.rpm                                                                         | 323 kB  00:00:00     
+(82/103): python2-subprocess32-3.2.6-14.el7.x86_64.rpm                                                                   |  47 kB  00:00:00     
+(83/103): python-lxml-3.2.1-4.el7.x86_64.rpm                                                                             | 758 kB  00:00:00     
+(84/103): quota-4.01-19.el7.x86_64.rpm                                                                                   | 179 kB  00:00:00     
+(85/103): quota-nls-4.01-19.el7.noarch.rpm                                                                               |  90 kB  00:00:00     
+(86/103): rpcbind-0.2.0-49.el7.x86_64.rpm                                                                                |  60 kB  00:00:00     
+(87/103): python-ipaddress-1.0.16-2.el7.noarch.rpm                                                                       |  34 kB  00:00:01     
+(88/103): ruby-2.0.0.648-39.el7_9.x86_64.rpm                                                                             |  73 kB  00:00:00     
+(89/103): python-setuptools-0.9.8-7.el7.noarch.rpm                                                                       | 397 kB  00:00:00     
+(90/103): resource-agents-4.1.1-61.el7_9.18.x86_64.rpm                                                                   | 481 kB  00:00:01     
+(91/103): ruby-irb-2.0.0.648-39.el7_9.noarch.rpm                                                                         |  94 kB  00:00:01     
+(92/103): ruby-libs-2.0.0.648-39.el7_9.x86_64.rpm                                                                        | 2.8 MB  00:00:01     
+(93/103): rubygem-bigdecimal-1.2.0-39.el7_9.x86_64.rpm                                                                   |  85 kB  00:00:00     
+(94/103): rubygem-psych-2.0.0-39.el7_9.x86_64.rpm                                                                        |  84 kB  00:00:00     
+(95/103): rubygems-2.0.14.1-39.el7_9.noarch.rpm                                                                          | 215 kB  00:00:00     
+(96/103): samba-common-4.10.16-24.el7_9.noarch.rpm                                                                       | 219 kB  00:00:00     
+(97/103): rubygem-rdoc-4.0.0-39.el7_9.noarch.rpm                                                                         | 324 kB  00:00:00     
+(98/103): rubygem-json-1.7.7-39.el7_9.x86_64.rpm                                                                         |  82 kB  00:00:00     
+(99/103): samba-common-libs-4.10.16-24.el7_9.x86_64.rpm                                                                  | 183 kB  00:00:00     
+(100/103): rubygem-io-console-0.4.2-39.el7_9.x86_64.rpm                                                                  |  56 kB  00:00:00     
+(101/103): tcp_wrappers-7.6-77.el7.x86_64.rpm                                                                            |  78 kB  00:00:00     
+(102/103): samba-client-libs-4.10.16-24.el7_9.x86_64.rpm                                                                 | 5.0 MB  00:00:01     
+(103/103): trousers-0.3.14-2.el7.x86_64.rpm                                                                              | 289 kB  00:00:01     
+------------------------------------------------------------------------------------------------------------------------------------------------
+合計                                                                                                            1.7 MB/s |  39 MB  00:00:23     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  インストール中          : ruby-libs-2.0.0.648-39.el7_9.x86_64                                                                           1/103 
+  インストール中          : libxslt-1.1.28-6.el7.x86_64                                                                                   2/103 
+  インストール中          : libqb-1.0.1-9.el7.x86_64                                                                                      3/103 
+  インストール中          : libtalloc-2.1.16-1.el7.x86_64                                                                                 4/103 
+  インストール中          : libtevent-0.9.39-1.el7.x86_64                                                                                 5/103 
+  インストール中          : 1:net-snmp-libs-5.7.2-49.el7_9.2.x86_64                                                                       6/103 
+  インストール中          : apr-1.4.8-7.el7.x86_64                                                                                        7/103 
+  インストール中          : libtdb-1.3.18-1.el7.x86_64                                                                                    8/103 
+  インストール中          : libldb-1.5.4-2.el7.x86_64                                                                                     9/103 
+  インストール中          : apr-util-1.5.2-6.el7.x86_64                                                                                  10/103 
+  インストール中          : python-lxml-3.2.1-4.el7.x86_64                                                                               11/103 
+  インストール中          : libevent-2.0.21-4.el7.x86_64                                                                                 12/103 
+  インストール中          : libcollection-0.7.0-32.el7.x86_64                                                                            13/103 
+  インストール中          : libtirpc-0.2.4-0.16.el7.x86_64                                                                               14/103 
+  インストール中          : rpcbind-0.2.0-49.el7.x86_64                                                                                  15/103 
+  インストール中          : fontpackages-filesystem-1.44-8.el7.noarch                                                                    16/103 
+  インストール中          : samba-common-4.10.16-24.el7_9.noarch                                                                         17/103 
+  インストール中          : avahi-libs-0.6.31-20.el7.x86_64                                                                              18/103 
+  インストール中          : 1:cups-libs-1.6.3-51.el7.x86_64                                                                              19/103 
+  インストール中          : psmisc-22.20-17.el7.x86_64                                                                                   20/103 
+  インストール中          : keyutils-1.5.8-3.el7.x86_64                                                                                  21/103 
+  インストール中          : libref_array-0.1.5-32.el7.x86_64                                                                             22/103 
+  インストール中          : libbasicobjects-0.1.1-32.el7.x86_64                                                                          23/103 
+  インストール中          : overpass-fonts-2.1-1.el7.noarch                                                                              24/103 
+  インストール中          : 1:liberation-fonts-common-1.07.2-16.el7.noarch                                                               25/103 
+  インストール中          : 1:liberation-sans-fonts-1.07.2-16.el7.noarch                                                                 26/103 
+  インストール中          : libverto-libevent-0.2.5-4.el7.x86_64                                                                         27/103 
+  インストール中          : httpd-tools-2.4.6-98.el7.centos.6.x86_64                                                                     28/103 
+  インストール中          : 1:perl-parent-0.225-244.el7.noarch                                                                           29/103 
+  インストール中          : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                            30/103 
+  インストール中          : perl-podlators-2.5.1-3.el7.noarch                                                                            31/103 
+  インストール中          : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                           32/103 
+  インストール中          : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                                                                     33/103 
+  インストール中          : perl-Text-ParseWords-3.29-4.el7.noarch                                                                       34/103 
+  インストール中          : perl-Encode-2.51-7.el7.x86_64                                                                                35/103 
+  インストール中          : perl-Pod-Usage-1.63-3.el7.noarch                                                                             36/103 
+  インストール中          : 4:perl-macros-5.16.3-299.el7_9.x86_64                                                                        37/103 
+  インストール中          : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                        38/103 
+  インストール中          : perl-threads-1.87-4.el7.x86_64                                                                               39/103 
+  インストール中          : perl-Storable-2.45-3.el7.x86_64                                                                              40/103 
+  インストール中          : perl-Carp-1.26-244.el7.noarch                                                                                41/103 
+  インストール中          : perl-Filter-1.49-3.el7.x86_64                                                                                42/103 
+  インストール中          : perl-Exporter-5.68-3.el7.noarch                                                                              43/103 
+  インストール中          : perl-constant-1.27-2.el7.noarch                                                                              44/103 
+  インストール中          : perl-Socket-2.010-5.el7.x86_64                                                                               45/103 
+  インストール中          : perl-Time-Local-1.2300-2.el7.noarch                                                                          46/103 
+  インストール中          : perl-threads-shared-1.43-6.el7.x86_64                                                                        47/103 
+  インストール中          : perl-File-Temp-0.23.01-3.el7.noarch                                                                          48/103 
+  インストール中          : perl-File-Path-2.09-2.el7.noarch                                                                             49/103 
+  インストール中          : perl-PathTools-3.40-5.el7.x86_64                                                                             50/103 
+  インストール中          : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                                   51/103 
+  インストール中          : 4:perl-libs-5.16.3-299.el7_9.x86_64                                                                          52/103 
+  インストール中          : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                          53/103 
+  インストール中          : perl-Getopt-Long-2.40-3.el7.noarch                                                                           54/103 
+  インストール中          : 4:perl-5.16.3-299.el7_9.x86_64                                                                               55/103 
+  インストール中          : 1:perl-TimeDate-2.30-2.el7.noarch                                                                            56/103 
+  インストール中          : libcgroup-0.41-21.el7.x86_64                                                                                 57/103 
+  インストール中          : corosync-2.4.5-7.el7_9.2.x86_64                                                                              58/103 
+  インストール中          : corosynclib-2.4.5-7.el7_9.2.x86_64                                                                           59/103 
+  インストール中          : 1:quota-nls-4.01-19.el7.noarch                                                                               60/103 
+  インストール中          : python-backports-1.0-8.el7.x86_64                                                                            61/103 
+  インストール中          : net-tools-2.0-0.25.20131004git.el7.x86_64                                                                    62/103 
+  インストール中          : tcp_wrappers-7.6-77.el7.x86_64                                                                               63/103 
+  インストール中          : 1:quota-4.01-19.el7.x86_64                                                                                   64/103 
+  インストール中          : libyaml-0.1.4-11.el7_0.x86_64                                                                                65/103 
+  インストール中          : rubygem-io-console-0.4.2-39.el7_9.x86_64                                                                     66/103 
+  インストール中          : rubygem-bigdecimal-1.2.0-39.el7_9.x86_64                                                                     67/103 
+  インストール中          : rubygem-psych-2.0.0-39.el7_9.x86_64                                                                          68/103 
+  インストール中          : rubygem-json-1.7.7-39.el7_9.x86_64                                                                           69/103 
+  インストール中          : rubygems-2.0.14.1-39.el7_9.noarch                                                                            70/103 
+  インストール中          : ruby-2.0.0.648-39.el7_9.x86_64                                                                               71/103 
+  インストール中          : ruby-irb-2.0.0.648-39.el7_9.noarch                                                                           72/103 
+  インストール中          : rubygem-rdoc-4.0.0-39.el7_9.noarch                                                                           73/103 
+  インストール中          : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64                                                        74/103 
+  インストール中          : 1:net-snmp-agent-libs-5.7.2-49.el7_9.2.x86_64                                                                75/103 
+  インストール中          : python2-subprocess32-3.2.6-14.el7.x86_64                                                                     76/103 
+  インストール中          : mailcap-2.1.41-2.el7.noarch                                                                                  77/103 
+  インストール中          : libnfsidmap-0.25-19.el7.x86_64                                                                               78/103 
+  インストール中          : nettle-2.7.1-9.el7_9.x86_64                                                                                  79/103 
+  インストール中          : trousers-0.3.14-2.el7.x86_64                                                                                 80/103 
+  インストール中          : gnutls-3.3.29-9.el7_6.x86_64                                                                                 81/103 
+  インストール中          : pacemaker-libs-1.1.23-1.el7_9.1.x86_64                                                                       82/103 
+  インストール中          : pacemaker-cli-1.1.23-1.el7_9.1.x86_64                                                                        83/103 
+  インストール中          : samba-client-libs-4.10.16-24.el7_9.x86_64                                                                    84/103 
+  インストール中          : libwbclient-4.10.16-24.el7_9.x86_64                                                                          85/103 
+  インストール中          : samba-common-libs-4.10.16-24.el7_9.x86_64                                                                    86/103 
+  インストール中          : cifs-utils-6.2-10.el7.x86_64                                                                                 87/103 
+  インストール中          : pacemaker-cluster-libs-1.1.23-1.el7_9.1.x86_64                                                               88/103 
+  インストール中          : python-ipaddress-1.0.16-2.el7.noarch                                                                         89/103 
+  インストール中          : python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch                                                     90/103 
+  インストール中          : python-setuptools-0.9.8-7.el7.noarch                                                                         91/103 
+  インストール中          : clufter-common-0.77.1-1.el7.noarch                                                                           92/103 
+  インストール中          : clufter-bin-0.77.1-1.el7.x86_64                                                                              93/103 
+  インストール中          : python-clufter-0.77.1-1.el7.noarch                                                                           94/103 
+  インストール中          : libpath_utils-0.2.1-32.el7.x86_64                                                                            95/103 
+  インストール中          : libini_config-1.3.1-32.el7.x86_64                                                                            96/103 
+  インストール中          : gssproxy-0.7.0-30.el7_9.x86_64                                                                               97/103 
+  インストール中          : 1:nfs-utils-1.3.0-0.68.el7.2.x86_64                                                                          98/103 
+  インストール中          : resource-agents-4.1.1-61.el7_9.18.x86_64                                                                     99/103 
+  インストール中          : pacemaker-1.1.23-1.el7_9.1.x86_64                                                                           100/103 
+  インストール中          : pcs-0.9.169-3.el7.centos.3.x86_64                                                                           101/103 
+  インストール中          : httpd-2.4.6-98.el7.centos.6.x86_64                                                                          102/103 
+  インストール中          : keepalived-1.3.5-19.el7.x86_64                                                                              103/103 
+  検証中                  : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                             1/103 
+  検証中                  : ruby-libs-2.0.0.648-39.el7_9.x86_64                                                                           2/103 
+  検証中                  : overpass-fonts-2.1-1.el7.noarch                                                                               3/103 
+  検証中                  : httpd-2.4.6-98.el7.centos.6.x86_64                                                                            4/103 
+  検証中                  : python-lxml-3.2.1-4.el7.x86_64                                                                                5/103 
+  検証中                  : libwbclient-4.10.16-24.el7_9.x86_64                                                                           6/103 
+  検証中                  : perl-File-Temp-0.23.01-3.el7.noarch                                                                           7/103 
+  検証中                  : 1:liberation-sans-fonts-1.07.2-16.el7.noarch                                                                  8/103 
+  検証中                  : libtevent-0.9.39-1.el7.x86_64                                                                                 9/103 
+  検証中                  : apr-util-1.5.2-6.el7.x86_64                                                                                  10/103 
+  検証中                  : cifs-utils-6.2-10.el7.x86_64                                                                                 11/103 
+  検証中                  : libpath_utils-0.2.1-32.el7.x86_64                                                                            12/103 
+  検証中                  : python-clufter-0.77.1-1.el7.noarch                                                                           13/103 
+  検証中                  : clufter-common-0.77.1-1.el7.noarch                                                                           14/103 
+  検証中                  : perl-File-Path-2.09-2.el7.noarch                                                                             15/103 
+  検証中                  : python-ipaddress-1.0.16-2.el7.noarch                                                                         16/103 
+  検証中                  : httpd-tools-2.4.6-98.el7.centos.6.x86_64                                                                     17/103 
+  検証中                  : perl-Text-ParseWords-3.29-4.el7.noarch                                                                       18/103 
+  検証中                  : trousers-0.3.14-2.el7.x86_64                                                                                 19/103 
+  検証中                  : keepalived-1.3.5-19.el7.x86_64                                                                               20/103 
+  検証中                  : rubygem-rdoc-4.0.0-39.el7_9.noarch                                                                           21/103 
+  検証中                  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                        22/103 
+  検証中                  : libtdb-1.3.18-1.el7.x86_64                                                                                   23/103 
+  検証中                  : libbasicobjects-0.1.1-32.el7.x86_64                                                                          24/103 
+  検証中                  : python-setuptools-0.9.8-7.el7.noarch                                                                         25/103 
+  検証中                  : rubygem-io-console-0.4.2-39.el7_9.x86_64                                                                     26/103 
+  検証中                  : 1:cups-libs-1.6.3-51.el7.x86_64                                                                              27/103 
+  検証中                  : libldb-1.5.4-2.el7.x86_64                                                                                    28/103 
+  検証中                  : apr-1.4.8-7.el7.x86_64                                                                                       29/103 
+  検証中                  : corosynclib-2.4.5-7.el7_9.2.x86_64                                                                           30/103 
+  検証中                  : pcs-0.9.169-3.el7.centos.3.x86_64                                                                            31/103 
+  検証中                  : gnutls-3.3.29-9.el7_6.x86_64                                                                                 32/103 
+  検証中                  : samba-client-libs-4.10.16-24.el7_9.x86_64                                                                    33/103 
+  検証中                  : samba-common-libs-4.10.16-24.el7_9.x86_64                                                                    34/103 
+  検証中                  : 4:perl-macros-5.16.3-299.el7_9.x86_64                                                                        35/103 
+  検証中                  : libref_array-0.1.5-32.el7.x86_64                                                                             36/103 
+  検証中                  : perl-Pod-Usage-1.63-3.el7.noarch                                                                             37/103 
+  検証中                  : perl-Encode-2.51-7.el7.x86_64                                                                                38/103 
+  検証中                  : nettle-2.7.1-9.el7_9.x86_64                                                                                  39/103 
+  検証中                  : pacemaker-libs-1.1.23-1.el7_9.1.x86_64                                                                       40/103 
+  検証中                  : libnfsidmap-0.25-19.el7.x86_64                                                                               41/103 
+  検証中                  : perl-threads-1.87-4.el7.x86_64                                                                               42/103 
+  検証中                  : keyutils-1.5.8-3.el7.x86_64                                                                                  43/103 
+  検証中                  : 1:liberation-fonts-common-1.07.2-16.el7.noarch                                                               44/103 
+  検証中                  : perl-Getopt-Long-2.40-3.el7.noarch                                                                           45/103 
+  検証中                  : psmisc-22.20-17.el7.x86_64                                                                                   46/103 
+  検証中                  : avahi-libs-0.6.31-20.el7.x86_64                                                                              47/103 
+  検証中                  : python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch                                                     48/103 
+  検証中                  : gssproxy-0.7.0-30.el7_9.x86_64                                                                               49/103 
+  検証中                  : mailcap-2.1.41-2.el7.noarch                                                                                  50/103 
+  検証中                  : perl-threads-shared-1.43-6.el7.x86_64                                                                        51/103 
+  検証中                  : perl-Storable-2.45-3.el7.x86_64                                                                              52/103 
+  検証中                  : rubygem-bigdecimal-1.2.0-39.el7_9.x86_64                                                                     53/103 
+  検証中                  : samba-common-4.10.16-24.el7_9.noarch                                                                         54/103 
+  検証中                  : 1:nfs-utils-1.3.0-0.68.el7.2.x86_64                                                                          55/103 
+  検証中                  : fontpackages-filesystem-1.44-8.el7.noarch                                                                    56/103 
+  検証中                  : rpcbind-0.2.0-49.el7.x86_64                                                                                  57/103 
+  検証中                  : 1:net-snmp-libs-5.7.2-49.el7_9.2.x86_64                                                                      58/103 
+  検証中                  : 1:perl-parent-0.225-244.el7.noarch                                                                           59/103 
+  検証中                  : python2-subprocess32-3.2.6-14.el7.x86_64                                                                     60/103 
+  検証中                  : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                                                                     61/103 
+  検証中                  : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64                                                        62/103 
+  検証中                  : 1:net-snmp-agent-libs-5.7.2-49.el7_9.2.x86_64                                                                63/103 
+  検証中                  : perl-Carp-1.26-244.el7.noarch                                                                                64/103 
+  検証中                  : libtalloc-2.1.16-1.el7.x86_64                                                                                65/103 
+  検証中                  : rubygems-2.0.14.1-39.el7_9.noarch                                                                            66/103 
+  検証中                  : libyaml-0.1.4-11.el7_0.x86_64                                                                                67/103 
+  検証中                  : 1:quota-4.01-19.el7.x86_64                                                                                   68/103 
+  検証中                  : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                           69/103 
+  検証中                  : 4:perl-5.16.3-299.el7_9.x86_64                                                                               70/103 
+  検証中                  : 1:perl-TimeDate-2.30-2.el7.noarch                                                                            71/103 
+  検証中                  : rubygem-psych-2.0.0-39.el7_9.x86_64                                                                          72/103 
+  検証中                  : clufter-bin-0.77.1-1.el7.x86_64                                                                              73/103 
+  検証中                  : tcp_wrappers-7.6-77.el7.x86_64                                                                               74/103 
+  検証中                  : perl-Filter-1.49-3.el7.x86_64                                                                                75/103 
+  検証中                  : ruby-irb-2.0.0.648-39.el7_9.noarch                                                                           76/103 
+  検証中                  : libtirpc-0.2.4-0.16.el7.x86_64                                                                               77/103 
+  検証中                  : perl-Exporter-5.68-3.el7.noarch                                                                              78/103 
+  検証中                  : perl-constant-1.27-2.el7.noarch                                                                              79/103 
+  検証中                  : perl-PathTools-3.40-5.el7.x86_64                                                                             80/103 
+  検証中                  : corosync-2.4.5-7.el7_9.2.x86_64                                                                              81/103 
+  検証中                  : pacemaker-1.1.23-1.el7_9.1.x86_64                                                                            82/103 
+  検証中                  : perl-Socket-2.010-5.el7.x86_64                                                                               83/103 
+  検証中                  : pacemaker-cli-1.1.23-1.el7_9.1.x86_64                                                                        84/103 
+  検証中                  : rubygem-json-1.7.7-39.el7_9.x86_64                                                                           85/103 
+  検証中                  : net-tools-2.0-0.25.20131004git.el7.x86_64                                                                    86/103 
+  検証中                  : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                          87/103 
+  検証中                  : perl-Time-Local-1.2300-2.el7.noarch                                                                          88/103 
+  検証中                  : libini_config-1.3.1-32.el7.x86_64                                                                            89/103 
+  検証中                  : resource-agents-4.1.1-61.el7_9.18.x86_64                                                                     90/103 
+  検証中                  : libqb-1.0.1-9.el7.x86_64                                                                                     91/103 
+  検証中                  : libverto-libevent-0.2.5-4.el7.x86_64                                                                         92/103 
+  検証中                  : libcollection-0.7.0-32.el7.x86_64                                                                            93/103 
+  検証中                  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                                   94/103 
+  検証中                  : python-backports-1.0-8.el7.x86_64                                                                            95/103 
+  検証中                  : ruby-2.0.0.648-39.el7_9.x86_64                                                                               96/103 
+  検証中                  : perl-podlators-2.5.1-3.el7.noarch                                                                            97/103 
+  検証中                  : libxslt-1.1.28-6.el7.x86_64                                                                                  98/103 
+  検証中                  : pacemaker-cluster-libs-1.1.23-1.el7_9.1.x86_64                                                               99/103 
+  検証中                  : libevent-2.0.21-4.el7.x86_64                                                                                100/103 
+  検証中                  : 4:perl-libs-5.16.3-299.el7_9.x86_64                                                                         101/103 
+  検証中                  : 1:quota-nls-4.01-19.el7.noarch                                                                              102/103 
+  検証中                  : libcgroup-0.41-21.el7.x86_64                                                                                103/103 
+
+インストール:
+  corosync.x86_64 0:2.4.5-7.el7_9.2   httpd.x86_64 0:2.4.6-98.el7.centos.6 keepalived.x86_64 0:1.3.5-19.el7 pacemaker.x86_64 0:1.1.23-1.el7_9.1
+  pcs.x86_64 0:0.9.169-3.el7.centos.3
+
+依存性関連をインストールしました:
+  apr.x86_64 0:1.4.8-7.el7                                                 apr-util.x86_64 0:1.5.2-6.el7                                        
+  avahi-libs.x86_64 0:0.6.31-20.el7                                        cifs-utils.x86_64 0:6.2-10.el7                                       
+  clufter-bin.x86_64 0:0.77.1-1.el7                                        clufter-common.noarch 0:0.77.1-1.el7                                 
+  corosynclib.x86_64 0:2.4.5-7.el7_9.2                                     cups-libs.x86_64 1:1.6.3-51.el7                                      
+  fontpackages-filesystem.noarch 0:1.44-8.el7                              gnutls.x86_64 0:3.3.29-9.el7_6                                       
+  gssproxy.x86_64 0:0.7.0-30.el7_9                                         httpd-tools.x86_64 0:2.4.6-98.el7.centos.6                           
+  keyutils.x86_64 0:1.5.8-3.el7                                            libbasicobjects.x86_64 0:0.1.1-32.el7                                
+  libcgroup.x86_64 0:0.41-21.el7                                           libcollection.x86_64 0:0.7.0-32.el7                                  
+  liberation-fonts-common.noarch 1:1.07.2-16.el7                           liberation-sans-fonts.noarch 1:1.07.2-16.el7                         
+  libevent.x86_64 0:2.0.21-4.el7                                           libini_config.x86_64 0:1.3.1-32.el7                                  
+  libldb.x86_64 0:1.5.4-2.el7                                              libnfsidmap.x86_64 0:0.25-19.el7                                     
+  libpath_utils.x86_64 0:0.2.1-32.el7                                      libqb.x86_64 0:1.0.1-9.el7                                           
+  libref_array.x86_64 0:0.1.5-32.el7                                       libtalloc.x86_64 0:2.1.16-1.el7                                      
+  libtdb.x86_64 0:1.3.18-1.el7                                             libtevent.x86_64 0:0.9.39-1.el7                                      
+  libtirpc.x86_64 0:0.2.4-0.16.el7                                         libverto-libevent.x86_64 0:0.2.5-4.el7                               
+  libwbclient.x86_64 0:4.10.16-24.el7_9                                    libxslt.x86_64 0:1.1.28-6.el7                                        
+  libyaml.x86_64 0:0.1.4-11.el7_0                                          lm_sensors-libs.x86_64 0:3.4.0-8.20160601gitf9185e5.el7              
+  mailcap.noarch 0:2.1.41-2.el7                                            net-snmp-agent-libs.x86_64 1:5.7.2-49.el7_9.2                        
+  net-snmp-libs.x86_64 1:5.7.2-49.el7_9.2                                  net-tools.x86_64 0:2.0-0.25.20131004git.el7                          
+  nettle.x86_64 0:2.7.1-9.el7_9                                            nfs-utils.x86_64 1:1.3.0-0.68.el7.2                                  
+  overpass-fonts.noarch 0:2.1-1.el7                                        pacemaker-cli.x86_64 0:1.1.23-1.el7_9.1                              
+  pacemaker-cluster-libs.x86_64 0:1.1.23-1.el7_9.1                         pacemaker-libs.x86_64 0:1.1.23-1.el7_9.1                             
+  perl.x86_64 4:5.16.3-299.el7_9                                           perl-Carp.noarch 0:1.26-244.el7                                      
+  perl-Encode.x86_64 0:2.51-7.el7                                          perl-Exporter.noarch 0:5.68-3.el7                                    
+  perl-File-Path.noarch 0:2.09-2.el7                                       perl-File-Temp.noarch 0:0.23.01-3.el7                                
+  perl-Filter.x86_64 0:1.49-3.el7                                          perl-Getopt-Long.noarch 0:2.40-3.el7                                 
+  perl-HTTP-Tiny.noarch 0:0.033-3.el7                                      perl-PathTools.x86_64 0:3.40-5.el7                                   
+  perl-Pod-Escapes.noarch 1:1.04-299.el7_9                                 perl-Pod-Perldoc.noarch 0:3.20-4.el7                                 
+  perl-Pod-Simple.noarch 1:3.28-4.el7                                      perl-Pod-Usage.noarch 0:1.63-3.el7                                   
+  perl-Scalar-List-Utils.x86_64 0:1.27-248.el7                             perl-Socket.x86_64 0:2.010-5.el7                                     
+  perl-Storable.x86_64 0:2.45-3.el7                                        perl-Text-ParseWords.noarch 0:3.29-4.el7                             
+  perl-Time-HiRes.x86_64 4:1.9725-3.el7                                    perl-Time-Local.noarch 0:1.2300-2.el7                                
+  perl-TimeDate.noarch 1:2.30-2.el7                                        perl-constant.noarch 0:1.27-2.el7                                    
+  perl-libs.x86_64 4:5.16.3-299.el7_9                                      perl-macros.x86_64 4:5.16.3-299.el7_9                                
+  perl-parent.noarch 1:0.225-244.el7                                       perl-podlators.noarch 0:2.5.1-3.el7                                  
+  perl-threads.x86_64 0:1.87-4.el7                                         perl-threads-shared.x86_64 0:1.43-6.el7                              
+  psmisc.x86_64 0:22.20-17.el7                                             python-backports.x86_64 0:1.0-8.el7                                  
+  python-backports-ssl_match_hostname.noarch 0:3.5.0.1-1.el7               python-clufter.noarch 0:0.77.1-1.el7                                 
+  python-ipaddress.noarch 0:1.0.16-2.el7                                   python-lxml.x86_64 0:3.2.1-4.el7                                     
+  python-setuptools.noarch 0:0.9.8-7.el7                                   python2-subprocess32.x86_64 0:3.2.6-14.el7                           
+  quota.x86_64 1:4.01-19.el7                                               quota-nls.noarch 1:4.01-19.el7                                       
+  resource-agents.x86_64 0:4.1.1-61.el7_9.18                               rpcbind.x86_64 0:0.2.0-49.el7                                        
+  ruby.x86_64 0:2.0.0.648-39.el7_9                                         ruby-irb.noarch 0:2.0.0.648-39.el7_9                                 
+  ruby-libs.x86_64 0:2.0.0.648-39.el7_9                                    rubygem-bigdecimal.x86_64 0:1.2.0-39.el7_9                           
+  rubygem-io-console.x86_64 0:0.4.2-39.el7_9                               rubygem-json.x86_64 0:1.7.7-39.el7_9                                 
+  rubygem-psych.x86_64 0:2.0.0-39.el7_9                                    rubygem-rdoc.noarch 0:4.0.0-39.el7_9                                 
+  rubygems.noarch 0:2.0.14.1-39.el7_9                                      samba-client-libs.x86_64 0:4.10.16-24.el7_9                          
+  samba-common.noarch 0:4.10.16-24.el7_9                                   samba-common-libs.x86_64 0:4.10.16-24.el7_9                          
+  tcp_wrappers.x86_64 0:7.6-77.el7                                         trousers.x86_64 0:0.3.14-2.el7                                       
+
+完了しました!
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# systemctl enable httpd
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# systemctl start httpd
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# vi /etc/drbd.d/apache.res
+--------------------------------------------------------------------------------------------
+
+      1 resource apache {
+      2     protocol C;
+      3     startup {
+      4         wfc-timeout 15;
+      5         degr-wfc-timeout 60;
+      6     }
+      7     net {
+      8         cram-hmac-alg sha1;
+      9         shared-secret "your_secret";
+     10     }
+     11     on sample {
+     12         device /dev/drbd0;
+     13         disk /dev/sda3;
+     14         address 192.168.3.7:7788;
+     15         meta-disk internal;
+     16     }
+     17     on honban {
+     18         device /dev/drbd0;
+     19         disk /dev/sda3;
+     20         address 192.168.3.10:7788;
+     21         meta-disk internal;
+     22     }
+     23 }
+~                
+--------------------------------------------------------------------------------------------
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# fdisk -l
+
+Disk /dev/sda: 11.4 GB, 11437867008 bytes, 22339584 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O サイズ (最小 / 推奨): 512 バイト / 512 バイト
+Disk label type: dos
+ディスク識別子: 0x000adae3
+
+デバイス ブート      始点        終点     ブロック   Id  システム
+/dev/sda1   *        2048     2099199     1048576   83  Linux
+/dev/sda2         2099200    21000000     9450400+  8e  Linux LVM
+/dev/sda3        21000192    22339583      669696   8e  Linux LVM
+
+
+Disk /dev/mapper/centos-root: 9214 MB, 9214885888 bytes, 17997824 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O サイズ (最小 / 推奨): 512 バイト / 512 バイト
+
+
+Disk /dev/mapper/centos-swap: 1145 MB, 1145044992 bytes, 2236416 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O サイズ (最小 / 推奨): 512 バイト / 512 バイト
+
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# partprobe
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# drbdadm create-md apache
+
+  --==  Thank you for participating in the global usage survey  ==--
+The server's response is:
+
+you are the 1132th user to install this version
+initializing activity log
+initializing bitmap (24 KB) to all zero
+Writing meta data...
+New drbd meta data block successfully created.
+success
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# drbdadm up apache
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# drbdadm primary --force apache
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# sudo vi /etc/keepalived/keepalived.conf
+--------------------------------------------------------------------------------------------
+
+　　　　　　　　　　・
+　　　　　　　　　　・
+　　　　　　　　　　・
+    166     interval 2
+    167     fall 2
+    168     rise 2
+    169 }
+    170 
+    171 vrrp_instance VI_1 {
+    172     state BACKUP
+    173     interface eth0
+    174     virtual_router_id 51
+    175     priority 100
+    176     advert_int 1
+    177     authentication {
+    178         auth_type PASS
+    179         auth_pass your_password
+    180     }
+    181     virtual_ipaddress {
+    182         192.168.1.100
+    183     }
+    184     track_script {
+    185         check_apache
+    186     }
+    187 }
+
+--------------------------------------------------------------------------------------------
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# systemctl start keepalived
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# systemctl enable keepalived
+Created symlink from /etc/systemd/system/multi-user.target.wants/keepalived.service to /usr/lib/systemd/system/keepalived.service.
+[root@sample ~]# 
+[root@sample ~]# 
+[root@sample ~]# journalctl -u keepalived
+-- Logs begin at 日 2023-03-26 23:55:00 JST, end at 日 2023-03-26 17:23:35 JST. --
+ 3月 26 17:23:19 sample systemd[1]: Starting LVS and VRRP High Availability Monitor...
+ 3月 26 17:23:19 sample Keepalived[2233]: Starting Keepalived v1.3.5 (03/19,2017), git commit v1.3.5-6-g6fa32f2
+ 3月 26 17:23:19 sample Keepalived[2233]: Opening file '/etc/keepalived/keepalived.conf'.
+ 3月 26 17:23:19 sample Keepalived[2234]: Starting Healthcheck child process, pid=2235
+ 3月 26 17:23:19 sample Keepalived_healthcheckers[2235]: Initializing ipvs
+ 3月 26 17:23:19 sample Keepalived[2234]: Starting VRRP child process, pid=2236
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: Registering Kernel netlink reflector
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: Registering Kernel netlink command channel
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: Registering gratuitous ARP shared channel
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: Opening file '/etc/keepalived/keepalived.conf'.
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: Cant find interface eth0 for vrrp_instance VI_1 !!!
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: Default interface eth0 does not exist and no interface specified. Skipping static address 192.168.200.1
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: Default interface eth0 does not exist and no interface specified. Skipping static address 192.168.200.1
+ 3月 26 17:23:19 sample systemd[1]: Started LVS and VRRP High Availability Monitor.
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: Default interface eth0 does not exist and no interface specified. Skipping static address 192.168.200.1
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: WARNING - default user 'keepalived_script' for script execution does not exist - please create.
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: vrrp instance VI_1 already defined
+ 3月 26 17:23:19 sample Keepalived_healthcheckers[2235]: Opening file '/etc/keepalived/keepalived.conf'.
+ 3月 26 17:23:19 sample Keepalived_vrrp[2236]: (VI_1): No VIP specified; at least one is required
+ 3月 26 17:23:19 sample Keepalived_healthcheckers[2235]: Activating healthchecker for service [192.168.200.100]:443
+ 3月 26 17:23:19 sample Keepalived_healthcheckers[2235]: Activating healthchecker for service [10.10.10.2]:1358
+ 3月 26 17:23:19 sample Keepalived_healthcheckers[2235]: Activating healthchecker for service [10.10.10.2]:1358
+ 3月 26 17:23:19 sample Keepalived_healthcheckers[2235]: Activating healthchecker for service [10.10.10.3]:1358
+ 3月 26 17:23:19 sample Keepalived_healthcheckers[2235]: Activating healthchecker for service [10.10.10.3]:1358
+ 3月 26 17:23:20 sample Keepalived_vrrp[2236]: Stopped
+ 3月 26 17:23:20 sample Keepalived[2234]: Keepalived_vrrp exited with permanent error CONFIG. Terminating
+ 3月 26 17:23:20 sample Keepalived[2234]: Stopping
+ 3月 26 17:23:20 sample Keepalived_healthcheckers[2235]: Removing service [192.168.201.100]:443 from VS [192.168.200.100]:443
+ 3月 26 17:23:20 sample Keepalived_healthcheckers[2235]: Removing service [192.168.200.4]:1358 from VS [10.10.10.3]:1358
+ 3月 26 17:23:26 sample Keepalived[2234]: Stopped Keepalived v1.3.5 (03/19,2017), git commit v1.3.5-6-g6fa32f2
+[root@sample ~]# 
+[root@sample ~]# 
+
