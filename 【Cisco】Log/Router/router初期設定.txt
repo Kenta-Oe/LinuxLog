@@ -1,0 +1,199 @@
+test#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+test(config)#
+test(config)#
+test(config)#hostname
+% Incomplete command.
+test(config)#hostname test1
+test1(config)#
+test1(config)#ip domain-name example.com
+test1(config)#
+test1(config)#
+test1(config)#crypto key generate rsa 
+How many bits in the modulus [512]: 2048
+% Generating 2048 bit RSA keys, keys will be non-exportable...[OK]
+
+test1(config)#
+*Mar 1 0:34:50.117: %SSH-5-ENABLED: SSH 2 has been enabled
+test1(config)#
+test1(config)#ip ssh version 2
+test1(config)#
+test1(config)#
+test1(config)#line vty 0 4
+test1(config-line)#
+test1(config-line)#
+test1(config-line)#transport input ssh
+test1(config-line)#
+test1(config-line)#
+test1(config-line)#username sample privilege 8 secret Pinpon6241
+test1(config)#
+test1(config)#
+test1(config)#exit
+test1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+test1#
+test1#show ip ssh
+SSH Enabled - version 2.0
+Authentication timeout: 120 secs; Authentication retries: 3
+test1#
+test1#
+test1#show running-config
+Building configuration...
+
+Current configuration : 824 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname test1
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username test1 privilege 8 secret 5 $1$mERr$q0kNHl8itkGPIYW/sk4VW.
+!
+!
+license udi pid CISCO2901/K9 sn FTX1524BANG-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+ip domain-name example.com
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+ transport input ssh
+!
+!
+!
+end
+
+
+test#
+test#
+test#copy running-config startup-config 
+Destination filename [startup-config]? y
+%Error copying nvram:y (Invalid argument)
+test#
+test#copy running-config startup-config 
+Destination filename [startup-config]? yes
+%Error copying nvram:yes (Invalid argument)
+test#
+test#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+test#
+test#
+test#show ip ssh
+SSH Enabled - version 2.0
+Authentication timeout: 120 secs; Authentication retries: 3
+test#
+test#
+test#enable
+test#
+test#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+test(config)#
+test(config)#interface GigabitEthernet0/0
+test(config-if)#
+test(config-if)#
+test(config-if)#ip address 192.168.3.100 255.255.255.0
+test(config-if)#
+test(config-if)#no shutdown
+
+test(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+test(config-if)#
+test(config-if)#
+test(config-if)#exit
+test(config)#
+test(config)#
+test(config)#exit
+test#
+%SYS-5-CONFIG_I: Configured from console by console
+
+test#
+test#show ip interface  GigabitEthernet0/0
+GigabitEthernet0/0 is up, line protocol is down (disabled)
+  Internet address is 192.168.3.100/24
+  Broadcast address is 255.255.255.255
+  Address determined by setup command
+  MTU is 1500 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing access list is not set
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is disabled
+  IP fast switching on the same interface is disabled
+  IP Flow switching is disabled
+  IP Fast switching turbo vector
+  IP multicast fast switching is disabled
+  IP multicast distributed fast switching is disabled
+  Router Discovery is disabled
+
+test#
+test#
