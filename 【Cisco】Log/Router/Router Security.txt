@@ -1,0 +1,44 @@
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#
+Router(config)#
+Router(config)#enable password cisco
+Router(config)#
+Router(config)#enable secret cisco
+The enable secret you have chosen is the same as your enable password.
+This is not recommended.  Re-enter the enable secret.
+Router(config)#
+Router(config)#
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#show running-
+Router#show running-config 
+Building configuration...
+
+Current configuration : 679 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+enable password cisco
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+
+Router#
+Router#

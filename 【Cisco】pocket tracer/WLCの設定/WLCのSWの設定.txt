@@ -1,0 +1,71 @@
+Switch>
+Switch>enable
+Switch#
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#
+Switch(config)#
+Switch(config)#interface vlan1
+Switch(config-if)#
+Switch(config-if)#ip address 192.168.100.254 255.255.255.0
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#
+Switch(config)#interface vlan10
+Switch(config-if)#
+Switch(config-if)#ip address 192.168.10.254 255.255.255.0
+Switch(config-if)#
+Switch(config-if)#exit
+Switch(config)#hostname L3SW
+L3SW(config)#
+L3SW(config)#
+L3SW(config)#router ospf 1
+IP routing not enabled
+L3SW(config)#
+L3SW(config)#ip routing
+L3SW(config)#
+L3SW(config)#router ospf 1
+L3SW(config-router)#
+L3SW(config-router)#log-adjacency-changes
+L3SW(config-router)#
+L3SW(config-router)#network 192.168.100.0 0.0.0.255 area 0
+L3SW(config-router)#
+L3SW(config-router)#network 192.168.10.0 0.0.0.255 area 0
+L3SW(config-router)#
+L3SW(config-router)#exit
+L3SW(config)#
+L3SW(config)#
+L3SW(config)#ip dhcp excluded-address 192.168.100.250 192.168.100.254
+L3SW(config)#
+L3SW(config)#ip dhcp excluded-address 192.168.10.250 192.168.100.254
+L3SW(config)#
+L3SW(config)#ip dhcp pool Wirelwss
+L3SW(dhcp-config)#ip dhcp pool Wirelwexitss
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#ip dhcp pool Wireless
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#network 192.168.100.0 255.255.255.0
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#default-router 192.168.100.254
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#exit
+L3SW(config)#
+L3SW(config)#ip dhcp pool VLAN10
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#network 192.168.10.0 255.255.255.0
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#default-router 192.168.10.254
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#
+L3SW(dhcp-config)#exit
+L3SW(config)#exit
+L3SW#
+%SYS-5-CONFIG_I: Configured from console by console
+
+L3SW#
+L3SW#write memory
+Building configuration...
+[OK]
+L3SW#
+

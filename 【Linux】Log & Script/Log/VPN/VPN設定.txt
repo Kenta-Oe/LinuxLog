@@ -1,0 +1,391 @@
+[root@vpn ~]# date
+2023年  4月  6日 木曜日 16:50:42 JST
+[root@vpn ~]# 
+[root@vpn ~]# 
+[root@vpn ~]# uname -r
+3.10.0-1160.88.1.el7.x86_64
+[root@vpn ~]# 
+[root@vpn ~]# 
+[root@vpn ~]# yum -y install gcc
+読み込んだプラグイン:fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: ftp.riken.jp
+ * extras: ftp.riken.jp
+ * updates: ftp.riken.jp
+依存性の解決をしています
+--> トランザクションの確認を実行しています。
+---> パッケージ gcc.x86_64 0:4.8.5-44.el7 を インストール
+--> 依存性の処理をしています: cpp = 4.8.5-44.el7 のパッケージ: gcc-4.8.5-44.el7.x86_64
+--> 依存性の処理をしています: glibc-devel >= 2.2.90-12 のパッケージ: gcc-4.8.5-44.el7.x86_64
+--> 依存性の処理をしています: libmpfr.so.4()(64bit) のパッケージ: gcc-4.8.5-44.el7.x86_64
+--> 依存性の処理をしています: libmpc.so.3()(64bit) のパッケージ: gcc-4.8.5-44.el7.x86_64
+--> トランザクションの確認を実行しています。
+---> パッケージ cpp.x86_64 0:4.8.5-44.el7 を インストール
+---> パッケージ glibc-devel.x86_64 0:2.17-326.el7_9 を インストール
+--> 依存性の処理をしています: glibc-headers = 2.17-326.el7_9 のパッケージ: glibc-devel-2.17-326.el7_9.x86_64
+--> 依存性の処理をしています: glibc-headers のパッケージ: glibc-devel-2.17-326.el7_9.x86_64
+---> パッケージ libmpc.x86_64 0:1.0.1-3.el7 を インストール
+---> パッケージ mpfr.x86_64 0:3.1.1-4.el7 を インストール
+--> トランザクションの確認を実行しています。
+---> パッケージ glibc-headers.x86_64 0:2.17-326.el7_9 を インストール
+--> 依存性の処理をしています: kernel-headers >= 2.2.1 のパッケージ: glibc-headers-2.17-326.el7_9.x86_64
+--> 依存性の処理をしています: kernel-headers のパッケージ: glibc-headers-2.17-326.el7_9.x86_64
+--> トランザクションの確認を実行しています。
+---> パッケージ kernel-headers.x86_64 0:3.10.0-1160.88.1.el7 を インストール
+--> 依存性解決を終了しました。
+
+依存性を解決しました
+
+======================================================================================================
+ Package                   アーキテクチャー  バージョン                      リポジトリー        容量
+======================================================================================================
+インストール中:
+ gcc                       x86_64            4.8.5-44.el7                    base                16 M
+依存性関連でのインストールをします:
+ cpp                       x86_64            4.8.5-44.el7                    base               5.9 M
+ glibc-devel               x86_64            2.17-326.el7_9                  updates            1.1 M
+ glibc-headers             x86_64            2.17-326.el7_9                  updates            691 k
+ kernel-headers            x86_64            3.10.0-1160.88.1.el7            updates            9.1 M
+ libmpc                    x86_64            1.0.1-3.el7                     base                51 k
+ mpfr                      x86_64            3.1.1-4.el7                     base               203 k
+
+トランザクションの要約
+======================================================================================================
+インストール  1 パッケージ (+6 個の依存関係のパッケージ)
+
+総ダウンロード容量: 33 M
+インストール容量: 60 M
+Downloading packages:
+(1/7): glibc-headers-2.17-326.el7_9.x86_64.rpm                                 | 691 kB  00:00:00     
+(2/7): libmpc-1.0.1-3.el7.x86_64.rpm                                           |  51 kB  00:00:00     
+(3/7): mpfr-3.1.1-4.el7.x86_64.rpm                                             | 203 kB  00:00:00     
+(4/7): kernel-headers-3.10.0-1160.88.1.el7.x86_64.rpm                          | 9.1 MB  00:00:02     
+(5/7): cpp-4.8.5-44.el7.x86_64.rpm                                             | 5.9 MB  00:00:03     
+(6/7): glibc-devel-2.17-326.el7_9.x86_64.rpm                                   | 1.1 MB  00:00:04     
+(7/7): gcc-4.8.5-44.el7.x86_64.rpm                                             |  16 MB  00:00:05     
+------------------------------------------------------------------------------------------------------
+合計                                                                  5.7 MB/s |  33 MB  00:00:05     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+警告: RPMDB は yum 以外で変更されました。
+  インストール中          : mpfr-3.1.1-4.el7.x86_64                                               1/7 
+  インストール中          : libmpc-1.0.1-3.el7.x86_64                                             2/7 
+  インストール中          : cpp-4.8.5-44.el7.x86_64                                               3/7 
+  インストール中          : kernel-headers-3.10.0-1160.88.1.el7.x86_64                            4/7 
+  インストール中          : glibc-headers-2.17-326.el7_9.x86_64                                   5/7 
+  インストール中          : glibc-devel-2.17-326.el7_9.x86_64                                     6/7 
+  インストール中          : gcc-4.8.5-44.el7.x86_64                                               7/7 
+  検証中                  : mpfr-3.1.1-4.el7.x86_64                                               1/7 
+  検証中                  : glibc-devel-2.17-326.el7_9.x86_64                                     2/7 
+  検証中                  : cpp-4.8.5-44.el7.x86_64                                               3/7 
+  検証中                  : glibc-headers-2.17-326.el7_9.x86_64                                   4/7 
+  検証中                  : gcc-4.8.5-44.el7.x86_64                                               5/7 
+  検証中                  : libmpc-1.0.1-3.el7.x86_64                                             6/7 
+  検証中                  : kernel-headers-3.10.0-1160.88.1.el7.x86_64                            7/7 
+
+インストール:
+  gcc.x86_64 0:4.8.5-44.el7                                                                           
+
+依存性関連をインストールしました:
+  cpp.x86_64 0:4.8.5-44.el7                      glibc-devel.x86_64 0:2.17-326.el7_9                  
+  glibc-headers.x86_64 0:2.17-326.el7_9          kernel-headers.x86_64 0:3.10.0-1160.88.1.el7         
+  libmpc.x86_64 0:1.0.1-3.el7                    mpfr.x86_64 0:3.1.1-4.el7                            
+
+完了しました!
+[root@vpn ~]# 
+[root@vpn ~]# 
+[root@vpn ~]# ls -al
+合計 22848
+dr-xr-x---.  2 root root      222  4月  6 16:34 .
+dr-xr-xr-x. 18 root root      257  4月  5 21:47 ..
+-rw-------.  1 root root     2048  4月  5 12:59 .bash_history
+-rw-r--r--.  1 root root       18 12月 29  2013 .bash_logout
+-rw-r--r--.  1 root root      176 12月 29  2013 .bash_profile
+-rw-r--r--.  1 root root      176 12月 29  2013 .bashrc
+-rw-r--r--.  1 root root      100 12月 29  2013 .cshrc
+-rw-r--r--.  1 root root      129 12月 29  2013 .tcshrc
+-rw-r--r--.  1 root root       25 11月 28 02:09 .vimrc
+-rw-------.  1 root root     1255 11月 23 01:01 anaconda-ks.cfg
+-rw-r--r--   1 root root 23363584  4月  6 16:34 softether-vpnserver-v4.41-9787-rtm-2023.03.14-linux-x64-64bit.tar
+[root@vpn ~]# 
+[root@vpn ~]# 
+[root@vpn ~]# 
+[root@vpn ~]# ls -al /tmp
+合計 4
+drwxrwxrwt. 13 root root 4096  4月  6 16:28 .
+dr-xr-xr-x. 18 root root  257  4月  5 21:47 ..
+drwxrwxrwt.  2 root root    6 11月 23 00:58 .ICE-unix
+drwxrwxrwt.  2 root root    6 11月 23 00:58 .Test-unix
+drwxrwxrwt.  2 root root    6 11月 23 00:58 .X11-unix
+drwxrwxrwt.  2 root root    6 11月 23 00:58 .XIM-unix
+drwxrwxrwt.  2 root root    6 11月 23 00:58 .font-unix
+drwx------.  3 root root   17  3月 12 03:03 systemd-private-5149ac1447974a75b334d36dc44fedc0-chronyd.service-2OMt3m
+drwx------   3 root root   17  4月  5 21:47 systemd-private-61ab59633bf447719c8acb952355d100-chronyd.service-we6t6O
+drwx------   3 root root   17  4月  7  2023 systemd-private-679885c4da334ff5bf703686b7c9f76e-chronyd.service-p9XN1S
+drwx------.  3 root root   17  3月  5 02:15 systemd-private-97cd8a3956f3486c87cb02f09f749b69-chronyd.service-rTvp9i
+drwx------.  3 root root   17  3月  4 17:18 systemd-private-97cd8a3956f3486c87cb02f09f749b69-systemd-hostnamed.service-iw5Q1x
+drwx------   3 root root   17  4月  6 03:40 systemd-private-db0c73655c504cb0a455623c8301149c-chronyd.service-uJsBhf
+-rw-------   1 root root    0  4月  5 18:41 tmpC6Mp5V
+[root@vpn ~]# 
+[root@vpn ~]# 
+[root@vpn ~]# mv softether-vpnserver-v4.41-9787-rtm-2023.03.14-linux-x64-64bit.tar /tmp
+[root@vpn ~]# 
+[root@vpn ~]# 
+[root@vpn ~]# cd /tmp
+[root@vpn tmp]# 
+[root@vpn tmp]# 
+[root@vpn tmp]# 
+[root@vpn tmp]# ls -al /tmp
+合計 22820
+drwxrwxrwt. 13 root root     4096  4月  6 16:35 .
+dr-xr-xr-x. 18 root root      257  4月  5 21:47 ..
+drwxrwxrwt.  2 root root        6 11月 23 00:58 .ICE-unix
+drwxrwxrwt.  2 root root        6 11月 23 00:58 .Test-unix
+drwxrwxrwt.  2 root root        6 11月 23 00:58 .X11-unix
+drwxrwxrwt.  2 root root        6 11月 23 00:58 .XIM-unix
+drwxrwxrwt.  2 root root        6 11月 23 00:58 .font-unix
+-rw-r--r--   1 root root 23363584  4月  6 16:34 softether-vpnserver-v4.41-9787-rtm-2023.03.14-linux-x64-64bit.tar
+drwx------.  3 root root       17  3月 12 03:03 systemd-private-5149ac1447974a75b334d36dc44fedc0-chronyd.service-2OMt3m
+drwx------   3 root root       17  4月  5 21:47 systemd-private-61ab59633bf447719c8acb952355d100-chronyd.service-we6t6O
+drwx------   3 root root       17  4月  7  2023 systemd-private-679885c4da334ff5bf703686b7c9f76e-chronyd.service-p9XN1S
+drwx------.  3 root root       17  3月  5 02:15 systemd-private-97cd8a3956f3486c87cb02f09f749b69-chronyd.service-rTvp9i
+drwx------.  3 root root       17  3月  4 17:18 systemd-private-97cd8a3956f3486c87cb02f09f749b69-systemd-hostnamed.service-iw5Q1x
+drwx------   3 root root       17  4月  6 03:40 systemd-private-db0c73655c504cb0a455623c8301149c-chronyd.service-uJsBhf
+-rw-------   1 root root        0  4月  5 18:41 tmpC6Mp5V
+[root@vpn tmp]# 
+[root@vpn tmp]# 
+[root@vpn tmp]# tar -xvf softether-vpnserver-v4.41-9787-rtm-2023.03.14-linux-x64-64bit.tar
+vpnserver/
+vpnserver/Makefile
+vpnserver/.install.sh
+vpnserver/ReadMeFirst_License.txt
+vpnserver/Authors.txt
+vpnserver/ReadMeFirst_Important_Notices_ja.txt
+vpnserver/ReadMeFirst_Important_Notices_en.txt
+vpnserver/ReadMeFirst_Important_Notices_cn.txt
+vpnserver/code/
+vpnserver/code/vpnserver.a
+vpnserver/code/vpncmd.a
+vpnserver/lib/
+vpnserver/lib/libcharset.a
+vpnserver/lib/libcrypto.a
+vpnserver/lib/libedit.a
+vpnserver/lib/libiconv.a
+vpnserver/lib/libintelaes.a
+vpnserver/lib/libncurses.a
+vpnserver/lib/libssl.a
+vpnserver/lib/libz.a
+vpnserver/lib/License.txt
+vpnserver/hamcore.se2
+[root@vpn tmp]# 
+[root@vpn tmp]# 
+[root@vpn tmp]# 
+[root@vpn tmp]# cd vpnserver/
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# make
+--------------------------------------------------------------------
+
+SoftEther VPN Server (Ver 4.41, Build 9787, Intel x64 / AMD64) for Linux Build Utility
+Copyright (c) SoftEther Project at University of Tsukuba, Japan. All Rights Reserved.
+
+--------------------------------------------------------------------
+
+
+Copyright (c) all contributors on SoftEther VPN project in GitHub.
+Copyright (c) Daiyuu Nobori, SoftEther Project at University of Tsukuba, and SoftEther Corporation.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and limitations under the License.
+
+
+DISCLAIMER
+==========
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+THIS SOFTWARE IS DEVELOPED IN JAPAN, AND DISTRIBUTED FROM JAPAN, UNDER JAPANESE LAWS. YOU MUST AGREE IN ADVANCE TO USE, COPY, MODIFY, MERGE, PUBLISH, DISTRIBUTE, SUBLICENSE, AND/OR SELL COPIES OF THIS SOFTWARE, THAT ANY JURIDICAL DISPUTES WHICH ARE CONCERNED TO THIS SOFTWARE OR ITS CONTENTS, AGAINST US (SOFTETHER PROJECT, SOFTETHER CORPORATION, DAIYUU NOBORI OR OTHER SUPPLIERS), OR ANY JURIDICAL DISPUTES AGAINST US WHICH ARE CAUSED BY ANY KIND OF USING, COPYING, MODIFYING, MERGING, PUBLISHING, DISTRIBUTING, SUBLICENSING, AND/OR SELLING COPIES OF THIS SOFTWARE SHALL BE REGARDED AS BE CONSTRUED AND CONTROLLED BY JAPANESE LAWS, AND YOU MUST FURTHER CONSENT TO EXCLUSIVE JURISDICTION AND VENUE IN THE COURTS SITTING IN TOKYO, JAPAN. YOU MUST WAIVE ALL DEFENSES OF LACK OF PERSONAL JURISDICTION AND FORUM NON CONVENIENS. PROCESS MAY BE SERVED ON EITHER PARTY IN THE MANNER AUTHORIZED BY APPLICABLE LAW OR COURT RULE.
+
+USE ONLY IN JAPAN. DO NOT USE THIS SOFTWARE IN ANOTHER COUNTRY UNLESS YOU HAVE A CONFIRMATION THAT THIS SOFTWARE DOES NOT VIOLATE ANY CRIMINAL LAWS OR CIVIL RIGHTS IN THAT PARTICULAR COUNTRY. USING THIS SOFTWARE IN OTHER COUNTRIES IS COMPLETELY AT YOUR OWN RISK. THE SOFTETHER VPN PROJECT HAS DEVELOPED AND DISTRIBUTED THIS SOFTWARE TO COMPLY ONLY WITH THE JAPANESE LAWS AND EXISTING CIVIL RIGHTS INCLUDING PATENTS WHICH ARE SUBJECTS APPLY IN JAPAN. OTHER COUNTRIES' LAWS OR CIVIL RIGHTS ARE NONE OF OUR CONCERNS NOR RESPONSIBILITIES. WE HAVE NEVER INVESTIGATED ANY CRIMINAL REGULATIONS, CIVIL LAWS OR INTELLECTUAL PROPERTY RIGHTS INCLUDING PATENTS IN ANY OF OTHER 200+ COUNTRIES AND TERRITORIES. BY NATURE, THERE ARE 200+ REGIONS IN THE WORLD, WITH DIFFERENT LAWS. IT IS IMPOSSIBLE TO VERIFY EVERY COUNTRIES' LAWS, REGULATIONS AND CIVIL RIGHTS TO MAKE THE SOFTWARE COMPLY WITH ALL COUNTRIES' LAWS BY THE PROJECT. EVEN IF YOU WILL BE SUED BY A PRIVATE ENTITY OR BE DAMAGED BY A PUBLIC SERVANT IN YOUR COUNTRY, THE DEVELOPERS OF THIS SOFTWARE WILL NEVER BE LIABLE TO RECOVER OR COMPENSATE SUCH DAMAGES, CRIMINAL OR CIVIL
+RESPONSIBILITIES. NOTE THAT THIS LINE IS NOT LICENSE RESTRICTION BUT JUST A STATEMENT FOR WARNING AND DISCLAIMER.
+
+READ AND UNDERSTAND THE 'src/WARNING.TXT' FILE BEFORE USING THIS SOFTWARE. SOME SOFTWARE PROGRAMS FROM THIRD PARTIES ARE INCLUDED ON THIS SOFTWARE WITH LICENSE CONDITIONS WHICH ARE DESCRIBED ON THE 'src/THIRD_PARTY.TXT' FILE.
+
+
+--------------------------------------------------------------------
+
+
+make[1]: ディレクトリ `/tmp/vpnserver' に入ります
+Preparing SoftEther VPN Server...
+ranlib lib/libcharset.a
+ranlib lib/libcrypto.a
+ranlib lib/libedit.a
+ranlib lib/libiconv.a
+ranlib lib/libintelaes.a
+ranlib lib/libncurses.a
+ranlib lib/libssl.a
+ranlib lib/libz.a
+ranlib code/vpnserver.a
+gcc code/vpnserver.a -fPIE -O2 -fsigned-char -pthread -m64 -lm -lrt -lpthread -L./ lib/libssl.a lib/libcrypto.a lib/libiconv.a lib/libcharset.a lib/libedit.a lib/libncurses.a lib/libz.a lib/libintelaes.a -ldl -o vpnserver
+ranlib code/vpncmd.a
+gcc code/vpncmd.a -fPIE -O2 -fsigned-char -pthread -m64 -lm -lrt -lpthread -L./ lib/libssl.a lib/libcrypto.a lib/libiconv.a lib/libcharset.a lib/libedit.a lib/libncurses.a lib/libz.a lib/libintelaes.a -ldl -o vpncmd
+./vpncmd /tool /cmd:Check
+vpncmd コマンド - SoftEther VPN コマンドライン管理ユーティリティ
+SoftEther VPN コマンドライン管理ユーティリティ (vpncmd コマンド)
+Version 4.41 Build 9787   (Japanese)
+Compiled 2023/03/14 11:00:03 by buildsan at crosswin with OpenSSL 3.0.7
+Copyright (c) 2012-2023 SoftEther VPN Project. All Rights Reserved.
+
+VPN Tools を起動しました。HELP と入力すると、使用できるコマンド一覧が表示できます。
+
+VPN Tools>Check
+Check コマンド - SoftEther VPN の動作が可能かどうかチェックする
+---------------------------------------------------
+SoftEther VPN 動作環境チェックツール
+
+Copyright (c) SoftEther VPN Project.
+All Rights Reserved.
+
+この動作環境チェックツールを実行したシステムがテストに合格した場合は、SoftEther VPN ソフトウェアが動作する可能性が高いです。チェックにはしばらく時間がかかる場合があります。そのままお待ちください...
+
+'カーネル系' のチェック中...
+              [合格] ○
+'メモリ操作系' のチェック中...
+              [合格] ○
+'ANSI / Unicode 文字列処理系' のチェック中...
+              [合格] ○
+'ファイルシステム' のチェック中...
+              [合格] ○
+'スレッド処理システム' のチェック中...
+              [合格] ○
+'ネットワークシステム' のチェック中...
+              [合格] ○
+
+すべてのチェックに合格しました。このシステム上で SoftEther VPN Server / Bridge が正しく動作する可能性が高いと思われます。
+
+コマンドは正常に終了しました。
+
+
+--------------------------------------------------------------------
+The preparation of SoftEther VPN Server is completed !
+
+
+*** How to switch the display language of the SoftEther VPN Server Service ***
+SoftEther VPN Server supports the following languages:
+  - Japanese
+  - English
+  - Simplified Chinese
+
+You can choose your prefered language of SoftEther VPN Server at any time.
+To switch the current language, open and edit the 'lang.config' file.
+
+
+Note: the administrative password is not set on the VPN Server. Please set your own administrative password as soon as possible by vpncmd or the GUI manager.
+
+
+*** How to start the SoftEther VPN Server Service ***
+
+Please execute './vpnserver start' to run the SoftEther VPN Server Background Service.
+And please execute './vpncmd' to run the SoftEther VPN Command-Line Utility to configure SoftEther VPN Server.
+
+Of course, you can use the VPN Server Manager GUI Application for Windows / Mac OS X on the other Windows / Mac OS X computers in order to configure the SoftEther VPN Server remotely.
+
+*** For Windows users ***
+You can download the SoftEther VPN Server Manager for Windows
+from the http://www.softether-download.com/ web site.
+This manager application helps you to completely and easily manage the VPN server services running in remote hosts.
+
+
+*** For Mac OS X users ***
+In April 2016 we released the SoftEther VPN Server Manager for Mac OS X.
+You can download it from the http://www.softether-download.com/ web site.
+VPN Server Manager for Mac OS X works perfectly as same as the traditional Windows versions. It helps you to completely and easily manage the VPN server services running in remote hosts.
+
+
+
+*** PacketiX VPN Server HTML5 Web Administration Console (NEW) ***
+This VPN Server / Bridge has the built-in HTML5 Web Administration Console.
+
+After you start the server daemon, you can open the HTML5 Web Administration Console is available at
+
+https://127.0.0.1:5555/
+or
+https://ip_address_of_the_vpn_server:5555/
+
+This HTML5 page is obviously under construction, and your HTML5 development contribution is very appreciated.
+
+--------------------------------------------------------------------
+
+make[1]: ディレクトリ `/tmp/vpnserver' から出ます
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# cd ..
+[root@vpn tmp]# 
+[root@vpn tmp]# mv vpnserver /usr/local
+[root@vpn tmp]# 
+[root@vpn tmp]# cd /usr/local/vpnserver/
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# chmod 600 *
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# chmod 700 vpncmd
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# chmod 700 vpnserver
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# 
+[root@vpn vpnserver]# cd /etc/systemd/system
+[root@vpn system]# 
+[root@vpn system]# vi  vpnserver.service
+[root@vpn system]# 
+[root@vpn system]# 
+[root@vpn system]# systemctl list-unit-files --type=service | grep vpn
+vpnserver.service                             disabled
+[root@vpn system]# 
+[root@vpn system]# 
+[root@vpn system]# systemctl enable vpnserver
+Created symlink from /etc/systemd/system/multi-user.target.wants/vpnserver.service to /etc/systemd/system/vpnserver.service.
+[root@vpn system]# 
+[root@vpn system]# systemctl start vpnserver
+[root@vpn system]# 
+[root@vpn system]# vi /etc/sysctl.conf
+[root@vpn system]# 
+[root@vpn system]# 
+[root@vpn system]# firewall-cmd --permanent --add-port=443/tcp
+success
+[root@vpn system]# 
+[root@vpn system]# firewall-cmd --reload && \
+> firewall-cmd --list-ports
+success
+80/tcp 443/tcp
+[root@vpn system]# 
+[root@vpn system]# 
+[root@vpn system]# 
+[root@vpn system]# systemctl status vpnserver
+● vpnserver.service - SoftEther VPN Server
+   Loaded: loaded (/etc/systemd/system/vpnserver.service; enabled; vendor preset: disabled)
+   Active: active (running) since 木 2023-04-06 16:40:01 JST; 7min ago
+  Process: 2151 ExecStart=/usr/local/vpnserver/vpnserver start (code=exited, status=0/SUCCESS)
+ Main PID: 2155 (vpnserver)
+   CGroup: /system.slice/vpnserver.service
+           ├─2155 /usr/local/vpnserver/vpnserver execsvc
+           └─2156 /usr/local/vpnserver/vpnserver execsvc
+
+ 4月 06 16:40:01 vpn systemd[1]: Starting SoftEther VPN Server...
+ 4月 06 16:40:01 vpn vpnserver[2151]: The SoftEther VPN Server service has been started.
+ 4月 06 16:40:01 vpn vpnserver[2151]: Let's get started by accessing to the following URL from... PC:
+ 4月 06 16:40:01 vpn vpnserver[2151]: https://192.168.3.202:5555/
+ 4月 06 16:40:01 vpn vpnserver[2151]: or
+ 4月 06 16:40:01 vpn vpnserver[2151]: https://192.168.3.202/
+ 4月 06 16:40:01 vpn vpnserver[2151]: Note: IP address may vary. Specify your server's IP address.
+ 4月 06 16:40:01 vpn vpnserver[2151]: A TLS certificate warning will appear because the server...ing.
+ 4月 06 16:40:01 vpn systemd[1]: Started SoftEther VPN Server.
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@vpn system]# 

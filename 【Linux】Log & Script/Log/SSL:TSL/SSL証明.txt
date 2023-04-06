@@ -1,0 +1,203 @@
+[root@ansible ~]# uname -r
+3.10.0-1160.83.1.el7.x86_64
+[root@ansible ~]# 
+[root@ansible ~]# 
+[root@ansible ~]# rpm -qa|grep openssl
+openssl-libs-1.0.2k-25.el7_9.x86_64
+openssl-1.0.2k-25.el7_9.x86_64
+[root@ansible ~]# 
+[root@ansible ~]# 
+[root@ansible ~]# 
+[root@ansible ~]# rpm -qa|grep mod_ssl
+[root@ansible ~]# 
+[root@ansible ~]# 
+[root@ansible ~]# 
+[root@ansible ~]# yum install mod_ssl
+読み込んだプラグイン:fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: ftp.iij.ad.jp
+ * epel: ftp.iij.ad.jp
+ * extras: ftp.iij.ad.jp
+ * updates: ftp.iij.ad.jp
+依存性の解決をしています
+--> トランザクションの確認を実行しています。
+---> パッケージ mod_ssl.x86_64 1:2.4.6-98.el7.centos.6 を インストール
+--> 依存性の処理をしています: httpd-mmn = 20120211x8664 のパッケージ: 1:mod_ssl-2.4.6-98.el7.centos.6.x86_64
+--> 依存性の処理をしています: httpd = 2.4.6-98.el7.centos.6 のパッケージ: 1:mod_ssl-2.4.6-98.el7.centos.6.x86_64
+--> 依存性の処理をしています: httpd のパッケージ: 1:mod_ssl-2.4.6-98.el7.centos.6.x86_64
+--> トランザクションの確認を実行しています。
+---> パッケージ httpd.x86_64 0:2.4.6-98.el7.centos.6 を インストール
+--> 依存性の処理をしています: httpd-tools = 2.4.6-98.el7.centos.6 のパッケージ: httpd-2.4.6-98.el7.centos.6.x86_64
+--> 依存性の処理をしています: /etc/mime.types のパッケージ: httpd-2.4.6-98.el7.centos.6.x86_64
+--> 依存性の処理をしています: libaprutil-1.so.0()(64bit) のパッケージ: httpd-2.4.6-98.el7.centos.6.x86_64
+--> 依存性の処理をしています: libapr-1.so.0()(64bit) のパッケージ: httpd-2.4.6-98.el7.centos.6.x86_64
+--> トランザクションの確認を実行しています。
+---> パッケージ apr.x86_64 0:1.4.8-7.el7 を インストール
+---> パッケージ apr-util.x86_64 0:1.5.2-6.el7 を インストール
+---> パッケージ httpd-tools.x86_64 0:2.4.6-98.el7.centos.6 を インストール
+---> パッケージ mailcap.noarch 0:2.1.41-2.el7 を インストール
+--> 依存性解決を終了しました。
+
+依存性を解決しました
+
+===========================================================================================================
+ Package                 アーキテクチャー   バージョン                           リポジトリー         容量
+===========================================================================================================
+インストール中:
+ mod_ssl                 x86_64             1:2.4.6-98.el7.centos.6              updates             116 k
+依存性関連でのインストールをします:
+ apr                     x86_64             1.4.8-7.el7                          base                104 k
+ apr-util                x86_64             1.5.2-6.el7                          base                 92 k
+ httpd                   x86_64             2.4.6-98.el7.centos.6                updates             2.7 M
+ httpd-tools             x86_64             2.4.6-98.el7.centos.6                updates              94 k
+ mailcap                 noarch             2.1.41-2.el7                         base                 31 k
+
+トランザクションの要約
+===========================================================================================================
+インストール  1 パッケージ (+5 個の依存関係のパッケージ)
+
+総ダウンロード容量: 3.1 M
+インストール容量: 10 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/6): mailcap-2.1.41-2.el7.noarch.rpm                                              |  31 kB  00:00:00     
+(2/6): httpd-tools-2.4.6-98.el7.centos.6.x86_64.rpm                                 |  94 kB  00:00:00     
+(3/6): apr-util-1.5.2-6.el7.x86_64.rpm                                              |  92 kB  00:00:00     
+(4/6): apr-1.4.8-7.el7.x86_64.rpm                                                   | 104 kB  00:00:00     
+(5/6): mod_ssl-2.4.6-98.el7.centos.6.x86_64.rpm                                     | 116 kB  00:00:00     
+(6/6): httpd-2.4.6-98.el7.centos.6.x86_64.rpm                                       | 2.7 MB  00:00:04     
+-----------------------------------------------------------------------------------------------------------
+合計                                                                       647 kB/s | 3.1 MB  00:00:04     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  インストール中          : apr-1.4.8-7.el7.x86_64                                                     1/6 
+  インストール中          : apr-util-1.5.2-6.el7.x86_64                                                2/6 
+  インストール中          : httpd-tools-2.4.6-98.el7.centos.6.x86_64                                   3/6 
+  インストール中          : mailcap-2.1.41-2.el7.noarch                                                4/6 
+  インストール中          : httpd-2.4.6-98.el7.centos.6.x86_64                                         5/6 
+  インストール中          : 1:mod_ssl-2.4.6-98.el7.centos.6.x86_64                                     6/6 
+  検証中                  : 1:mod_ssl-2.4.6-98.el7.centos.6.x86_64                                     1/6 
+  検証中                  : mailcap-2.1.41-2.el7.noarch                                                2/6 
+  検証中                  : apr-1.4.8-7.el7.x86_64                                                     3/6 
+  検証中                  : apr-util-1.5.2-6.el7.x86_64                                                4/6 
+  検証中                  : httpd-tools-2.4.6-98.el7.centos.6.x86_64                                   5/6 
+  検証中                  : httpd-2.4.6-98.el7.centos.6.x86_64                                         6/6 
+
+インストール:
+  mod_ssl.x86_64 1:2.4.6-98.el7.centos.6                                                                   
+
+依存性関連をインストールしました:
+  apr.x86_64 0:1.4.8-7.el7                          apr-util.x86_64 0:1.5.2-6.el7                          
+  httpd.x86_64 0:2.4.6-98.el7.centos.6              httpd-tools.x86_64 0:2.4.6-98.el7.centos.6             
+  mailcap.noarch 0:2.1.41-2.el7                    
+
+完了しました!
+[root@ansible ~]# cd /etc/pki/tls/certs/
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# openssl genrsa -out server.key 2048
+Generating RSA private key, 2048 bit long modulus
+.............................................................................................................+++
+...........+++
+e is 65537 (0x10001)
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# ls -l
+合計 20
+-rw-r--r--. 1 root root 2516  3月 29  2022 Makefile
+lrwxrwxrwx. 1 root root   49  3月  4 17:31 ca-bundle.crt -> /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+lrwxrwxrwx. 1 root root   55  3月  4 17:31 ca-bundle.trust.crt -> /etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
+-rw-------. 1 root root 1391  3月 16 23:58 localhost.crt
+-rwxr-xr-x. 1 root root  610  3月 29  2022 make-dummy-cert
+-rwxr-xr-x. 1 root root  829  3月 29  2022 renew-dummy-cert
+-rw-r--r--. 1 root root 1675  3月 17 00:01 server.key
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# openssl req -new -key server.key -out server.csr
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [XX]:
+State or Province Name (full name) []:
+Locality Name (eg, city) [Default City]:
+Organization Name (eg, company) [Default Company Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (eg, your name or your server's hostname) []:
+Email Address []:
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# ls -l
+合計 24
+-rw-r--r--. 1 root root 2516  3月 29  2022 Makefile
+lrwxrwxrwx. 1 root root   49  3月  4 17:31 ca-bundle.crt -> /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+lrwxrwxrwx. 1 root root   55  3月  4 17:31 ca-bundle.trust.crt -> /etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
+-rw-------. 1 root root 1391  3月 16 23:58 localhost.crt
+-rwxr-xr-x. 1 root root  610  3月 29  2022 make-dummy-cert
+-rwxr-xr-x. 1 root root  829  3月 29  2022 renew-dummy-cert
+-rw-r--r--. 1 root root  952  3月 17 00:13 server.csr
+-rw-r--r--. 1 root root 1675  3月 17 00:01 server.key
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# openssl x509 -req -in server.csr -signkey server.key -days 3650 -out server.crt
+Signature ok
+subject=/C=XX/L=Default City/O=Default Company Ltd
+Getting Private key
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# vi /etc/httpd/conf.d/ssl.conf
+----------------------------------------------------------------------------------
+    206 BrowserMatch "MSIE [2-5]" \
+    207          nokeepalive ssl-unclean-shutdown \
+    208          downgrade-1.0 force-response-1.0
+    209 
+    210 #   Per-Server Logging:
+    211 #   The home of a custom SSL log file. Use this when you want a
+    212 #   compact non-error SSL logfile on a virtual host basis.
+    213 CustomLog logs/ssl_request_log \
+    214           "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+    215 
+    216 </VirtualHost>
+    217 
+    218 SSLCertificateFile /etc/pki/tls/certs/server.crt
+    219 SSLCertificateKeyFile /etc/pki/tls/certs/server.key
+    220 
+
+----------------------------------------------------------------------------------
+[root@ansible certs]# systemctl restart httpd
+[root@ansible certs]# 
+[root@ansible certs]# 
+[root@ansible certs]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since 土 2023-03-18 00:51:53 JST; 9min ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 1573 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─1573 /usr/sbin/httpd -DFOREGROUND
+           ├─1574 /usr/sbin/httpd -DFOREGROUND
+           ├─1575 /usr/sbin/httpd -DFOREGROUND
+           ├─1576 /usr/sbin/httpd -DFOREGROUND
+           ├─1577 /usr/sbin/httpd -DFOREGROUND
+           └─1578 /usr/sbin/httpd -DFOREGROUND
+
+ 3月 18 00:51:32 ansible systemd[1]: Starting The Apache HTTP Server...
+ 3月 18 00:51:43 ansible httpd[1573]: AH00558: httpd: Could not reliably determine the server's ful...sage
+ 3月 18 00:51:53 ansible systemd[1]: Started The Apache HTTP Server.
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@ansible certs]# 
+[root@ansible certs]# 
